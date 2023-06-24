@@ -9,23 +9,24 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Sat, 24 Jun 2023 09:11:55 GMT</pubDate>
+    <pubDate>Sat, 24 Jun 2023 14:06:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Homepage</title>
+      <title>初次建站</title>
       <link>http://example.com/2023/06/24/homepage/</link>
       <guid>http://example.com/2023/06/24/homepage/</guid>
       <pubDate>Fri, 23 Jun 2023 20:36:32 GMT</pubDate>
       
         
         
-      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</description>
+      <description>&lt;p&gt;记录搭建过程&lt;/p&gt;
+&lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;h3 id=&quot;学习中&quot;&gt;&lt;a href=&quot;#学习中&quot; class=&quot;headerlink&quot; titl</description>
         
       
       
       
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:80%; zoom:25%;" />]]></content:encoded>
+      <content:encoded><![CDATA[<p>记录搭建过程</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:80%; zoom:25%;" />]]></content:encoded>
       
       
       <category domain="http://example.com/categories/Learn/">Learn</category>
