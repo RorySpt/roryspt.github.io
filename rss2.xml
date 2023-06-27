@@ -9,8 +9,23 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Sat, 24 Jun 2023 14:06:16 GMT</pubDate>
+    <pubDate>Tue, 27 Jun 2023 11:16:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>&#92;[Learn OpenGL&#92;] 项目配置</title>
+      <link>http://example.com/2023/06/27/learn-opengl/project-setting/</link>
+      <guid>http://example.com/2023/06/27/learn-opengl/project-setting/</guid>
+      <pubDate>Tue, 27 Jun 2023 11:13:02 GMT</pubDate>
+      
+      
+      
+      
+      
+      
+      <comments>http://example.com/2023/06/27/learn-opengl/project-setting/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>初次建站</title>
