@@ -9,18 +9,57 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Tue, 27 Jun 2023 11:16:42 GMT</pubDate>
+    <pubDate>Tue, 27 Jun 2023 13:14:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>&#92;[Learn OpenGL&#92;] 项目配置</title>
+      <title>个人项目</title>
+      <link>http://example.com/2023/06/27/myproject/</link>
+      <guid>http://example.com/2023/06/27/myproject/</guid>
+      <pubDate>Tue, 27 Jun 2023 11:59:36 GMT</pubDate>
+      
+      <description>这里展示了一些个人作品</description>
+      
+      
+      
+      <content:encoded><![CDATA[<span id="more"></span><hr><h2 id="毕业设计功能展示——多功能万年历的设计"><a href="#毕业设计功能展示——多功能万年历的设计" class="headerlink" title="毕业设计功能展示——多功能万年历的设计"></a>毕业设计功能展示——多功能万年历的设计</h2><iframe src="//player.bilibili.com/player.html?aid=455175341&bvid=BV1A5411t7hz&cid=177837592&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="c-太空射手"><a href="#c-太空射手" class="headerlink" title="c++ 太空射手"></a>c++ 太空射手</h2><iframe src="//player.bilibili.com/player.html?aid=374486044&bvid=BV1LZ4y1P7Rk&cid=303106721&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="【OpenGL学习】动态光源"><a href="#【OpenGL学习】动态光源" class="headerlink" title="【OpenGL学习】动态光源"></a>【OpenGL学习】动态光源</h2><iframe src="//player.bilibili.com/player.html?aid=431241471&bvid=BV1XG41177LC&cid=850345263&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E4%BD%9C%E5%93%81/">作品</category>
+      
+      
+      <category domain="http://example.com/tags/%E4%BD%9C%E5%93%81/">作品</category>
+      
+      
+      <comments>http://example.com/2023/06/27/myproject/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[Learn OpenGL] 项目配置</title>
       <link>http://example.com/2023/06/27/learn-opengl/project-setting/</link>
       <guid>http://example.com/2023/06/27/learn-opengl/project-setting/</guid>
       <pubDate>Tue, 27 Jun 2023 11:13:02 GMT</pubDate>
       
+        
+        
+      <description>&lt;blockquote&gt;&lt;p&gt;Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;David L</description>
+        
       
       
       
+      <content:encoded><![CDATA[<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/">http://devdocs.io</a></p><footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote><blockquote><p>Every interaction is both precious and an opportunity to delight.</p><footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/Learn/">Learn</category>
+      
+      <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
+      
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/06/27/learn-opengl/project-setting/#disqus_thread</comments>
@@ -33,15 +72,11 @@
       <guid>http://example.com/2023/06/24/homepage/</guid>
       <pubDate>Fri, 23 Jun 2023 20:36:32 GMT</pubDate>
       
-        
-        
-      <description>&lt;p&gt;记录搭建过程&lt;/p&gt;
-&lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;h3 id=&quot;学习中&quot;&gt;&lt;a href=&quot;#学习中&quot; class=&quot;headerlink&quot; titl</description>
-        
+      <description>记录搭建过程</description>
       
       
       
-      <content:encoded><![CDATA[<p>记录搭建过程</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:80%; zoom:25%;" />]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a><br> <a href="https://hexo-next.readthedocs.io/zh_CN/latest/">hexo-next&#x2F;readthedocs</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:95%; border-radius: 20px;overflow: hidden;" />]]></content:encoded>
       
       
       <category domain="http://example.com/categories/Learn/">Learn</category>
@@ -58,10 +93,7 @@
       <guid>http://example.com/2023/06/23/hello-world/</guid>
       <pubDate>Thu, 22 Jun 2023 16:04:41 GMT</pubDate>
       
-        
-        
-      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</description>
-        
+      <description>This is an automatically generated document</description>
       
       
       

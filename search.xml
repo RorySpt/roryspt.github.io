@@ -4,13 +4,54 @@
   
     
     <entry>
-      <title>&#92;[Learn OpenGL&#92;] 项目配置</title>
+      <title>个人项目</title>
+      <link href="/2023/06/27/myproject/"/>
+      <url>/2023/06/27/myproject/</url>
+      
+        <content type="html"><![CDATA[<span id="more"></span><hr><h2 id="毕业设计功能展示——多功能万年历的设计"><a href="#毕业设计功能展示——多功能万年历的设计" class="headerlink" title="毕业设计功能展示——多功能万年历的设计"></a>毕业设计功能展示——多功能万年历的设计</h2><iframe src="//player.bilibili.com/player.html?aid=455175341&bvid=BV1A5411t7hz&cid=177837592&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="c-太空射手"><a href="#c-太空射手" class="headerlink" title="c++ 太空射手"></a>c++ 太空射手</h2><iframe src="//player.bilibili.com/player.html?aid=374486044&bvid=BV1LZ4y1P7Rk&cid=303106721&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h2 id="【OpenGL学习】动态光源"><a href="#【OpenGL学习】动态光源" class="headerlink" title="【OpenGL学习】动态光源"></a>【OpenGL学习】动态光源</h2><iframe src="//player.bilibili.com/player.html?aid=431241471&bvid=BV1XG41177LC&cid=850345263&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 作品 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 作品 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[Learn OpenGL] 项目配置</title>
       <link href="/2023/06/27/learn-opengl/project-setting/"/>
       <url>/2023/06/27/learn-opengl/project-setting/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io/">http://devdocs.io</a></p><footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote><blockquote><p>Every interaction is both precious and an opportunity to delight.</p><footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn OpenGL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenGL </tag>
+            
+            <tag> Learn </tag>
+            
+        </tags>
       
     </entry>
     
@@ -21,7 +62,7 @@
       <link href="/2023/06/24/homepage/"/>
       <url>/2023/06/24/homepage/</url>
       
-        <content type="html"><![CDATA[<p>记录搭建过程</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:80%; zoom:25%;" />]]></content>
+        <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><h3 id="学习中"><a href="#学习中" class="headerlink" title="学习中"></a>学习中</h3><p> <a href="https://zhuanlan.zhihu.com/p/106060640">个人博客第8篇——优化主题（持续更新）</a><br> <a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br> <a href="https://hexo.io/zh-cn/docs/configuration">hexo&#x2F;docs&#x2F;configuration</a><br> <a href="https://theme-next.js.org/docs/getting-started/">NexT&#x2F;Getting Started</a><br> <a href="https://hexo-next.readthedocs.io/zh_CN/latest/">hexo-next&#x2F;readthedocs</a></p><h3 id="网站备注"><a href="#网站备注" class="headerlink" title="网站备注"></a>网站备注</h3><p> <a href="https://fontawesome.com/">Font Awesome</a> —— 图标网站</p><p> <a href="https://smms.app/">SMMS</a> —— 图床网站</p><h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><!-- ![background.jpg](https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg)--><img src="https://s2.loli.net/2023/06/24/RODohqMeJjZXxw6.jpg" style="width:95%; border-radius: 20px;overflow: hidden;" />]]></content>
       
       
       <categories>
