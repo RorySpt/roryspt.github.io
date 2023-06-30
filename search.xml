@@ -33,7 +33,7 @@
       <link href="/2023/06/27/learn-opengl/project-setting/"/>
       <url>/2023/06/27/learn-opengl/project-setting/</url>
       
-        <content type="html"><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p><h1 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h1><ol><li>修改source_group时，vs需要重新打开才能看到效果</li></ol>]]></content>
+        <content type="html"><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p><span id="more"></span><h1 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h1><ol><li>修改source_group时，vs需要重新打开才能看到效果</li></ol>]]></content>
       
       
       <categories>
