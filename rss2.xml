@@ -44,12 +44,12 @@
         
         
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old&quot;&gt;项目地址&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
+&lt;h1 id=&quot;遇到的坑&quot;&gt;&lt;a href=&quot;#遇到的坑&quot; class=</description>
         
       
       
       
-      <content:encoded><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p><h1 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h1><ol><li>修改source_group时，vs需要重新打开才能看到效果</li></ol>]]></content:encoded>
       
       
       <category domain="http://example.com/categories/Learn/">Learn</category>
