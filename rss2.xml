@@ -45,7 +45,7 @@
       
       
       
-      <content:encoded><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p><span id="more"></span><h1 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h1><ol><li>修改source_group时，vs需要重新打开才能看到效果</li></ol>]]></content:encoded>
+      <content:encoded><![CDATA[<p><strong><a href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p><span id="more"></span><h1 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h1><ol><li><p>用文件夹来组织目标 (target)</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set_property</span>(GLOBAL PROPERTY USE_FOLDERS <span class="keyword">ON</span>)</span><br></pre></td></tr></table></figure></li><li><p>修改source_group时，vs需要重新打开才能看到效果</p></li><li><p>多核编译</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_compile_options</span>(<span class="keyword">target</span> PUBLIC <span class="string">&quot;/MP&quot;</span>)</span><br></pre></td></tr></table></figure></li></ol>]]></content:encoded>
       
       
       <category domain="http://example.com/categories/Learn/">Learn</category>
