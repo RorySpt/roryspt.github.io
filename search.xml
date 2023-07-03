@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>modern c++ usages</title>
+      <link href="/2023/07/03/modern-cpp/modern-cpp-usages/"/>
+      <url>/2023/07/03/modern-cpp/modern-cpp-usages/</url>
+      
+        <content type="html"><![CDATA[<h1 id="时间日期（chrono）"><a href="#时间日期（chrono）" class="headerlink" title="时间日期（chrono）"></a>时间日期（chrono）</h1><h2 id="打印当前时间"><a href="#打印当前时间" class="headerlink" title="打印当前时间"></a>打印当前时间</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> std::chrono::zoned_time cur_time&#123; std::chrono::<span class="built_in">current_zone</span>(),</span><br><span class="line">std::chrono::system_clock::<span class="built_in">now</span>() &#125;;</span><br><span class="line"></span><br><span class="line">std::cout &lt;&lt; std::format(<span class="string">&quot;&#123;:L%F %H:%M:%OS  %z %Z &#125;\n&quot;</span>, cur_time);</span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li><p>格式化参考 <a href="https://zh.cppreference.com/w/cpp/chrono/system_clock/formatter">std::formatter - cppreference.com</a></p></li><li><p>时间类参考 <a href="https://zh.cppreference.com/w/cpp/chrono/system_clock">cppreference&#x2F;cpp&#x2F;chrono&#x2F;system_clock</a></p></li><li><p>时区类参考</p><p><a href="https://runebook.dev/zh/docs/cpp/chrono/current_zone">runebook&#x2F;cpp&#x2F;chrono&#x2F;current_zone</a></p><p><a href="https://zh.cppreference.com/w/cpp/chrono/current_zone">https://zh.cppreference.com/w/cpp/chrono/current_zone</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+            <tag> Learn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人项目</title>
       <link href="/2023/06/27/myproject/"/>
       <url>/2023/06/27/myproject/</url>
@@ -47,9 +76,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
