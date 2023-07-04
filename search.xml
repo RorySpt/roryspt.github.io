@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Learn OpenGL] 基础知识</title>
+      <link href="/2023/07/04/learn-opengl/basic-knowledge/"/>
+      <url>/2023/07/04/learn-opengl/basic-knowledge/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h1><h2 id="缓冲绑定点是什么？"><a href="#缓冲绑定点是什么？" class="headerlink" title="缓冲绑定点是什么？"></a>缓冲绑定点是什么？</h2><p>缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。</p><p>在OpenGL中，常见的缓冲绑定点包括：</p><ol><li>顶点缓冲对象绑定点（Vertex Buffer Object Binding Point）：用于将顶点缓冲对象绑定到顶点属性的位置，以供顶点着色器读取顶点数据。</li><li>索引缓冲对象绑定点（Index Buffer Object Binding Point）：用于将索引缓冲对象绑定到绘制命令中的索引数据位置，以供绘制命令使用。</li><li>Uniform缓冲对象绑定点（Uniform Buffer Object Binding Point）：用于将Uniform缓冲对象绑定到着色器程序中的Uniform变量位置，以供着色器程序读取Uniform数据。</li><li>纹理缓冲对象绑定点（Texture Buffer Object Binding Point）：用于将纹理缓冲对象绑定到纹理单元，以供着色器程序读取纹理数据。</li></ol><p>在使用缓冲对象时，我们需要将缓冲对象绑定到相应的缓冲绑定点上，这样OpenGL才能正确地使用缓冲对象中的数据。而绑定缓冲对象则是通过使用对应的glBindBuffer函数实现的。</p><h2 id="opengl状态机内部数据是如何分布的？"><a href="#opengl状态机内部数据是如何分布的？" class="headerlink" title="opengl状态机内部数据是如何分布的？"></a>opengl状态机内部数据是如何分布的？</h2><p>OpenGL的内部状态由一系列数据和状态变量组成，这些变量存储了OpenGL的各种配置选项、当前绑定的对象和各种状态信息。下面是一些常见的OpenGL状态：</p><ol><li>渲染管线状态（Pipeline State）：包括顶点输入状态、光栅化状态、片段处理状态等。这些状态存储了OpenGL的渲染管线各个阶段的配置选项和设置。</li><li>缓冲绑定状态（Buffer Binding State）：存储了顶点缓冲对象、索引缓冲对象和Uniform缓冲对象等的绑定信息。这些状态记录了当前绑定的缓冲对象的相关属性和数据。</li><li>纹理绑定状态（Texture Binding State）：存储了纹理对象的绑定信息，包括2D纹理、立方体贴图、多重采样纹理等。这些状态记录了当前绑定的纹理对象的相关属性和数据。</li><li>着色器程序状态（Shader Program State）：存储了当前着色器程序的相关信息，包括顶点着色器、片段着色器、几何着色器等。这些状态记录了当前使用的着色器程序的相关属性和数据。</li><li>内存管理状态（Memory Management State）：存储了OpenGL中的内存对象，包括帧缓冲对象、渲染缓冲对象等。这些状态记录了当前内存对象的相关属性和数据。</li><li>视口状态（Viewport State）：存储了OpenGL绘制的视口的相关信息，包括视口的位置和大小。这些状态记录了当前视口的相关属性和数据。</li></ol><p>这些状态和数据被保存在OpenGL当前的上下文中。当我们使用OpenGL API来修改这些状态时，实际上是在修改当前上下文中的对应变量的值。因此，在使用OpenGL时，我们通常会对这些状态进行配置和修改，以达到期望的渲染效果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn OpenGL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenGL </tag>
+            
+            <tag> Learn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>modern c++ usages</title>
       <link href="/2023/07/03/modern-cpp/modern-cpp-usages/"/>
       <url>/2023/07/03/modern-cpp/modern-cpp-usages/</url>

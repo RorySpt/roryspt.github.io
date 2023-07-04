@@ -22,29 +22,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="项目地址">
+    <meta name="description" content="问答缓冲绑定点是什么？缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Binding">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Learn OpenGL] 项目配置">
-<meta property="og:url" content="http://example.com/2023/06/27/learn-opengl/project-setting/index.html">
+<meta property="og:title" content="[Learn OpenGL] 基础知识">
+<meta property="og:url" content="http://example.com/2023/07/04/learn-opengl/basic-knowledge/index.html">
 <meta property="og:site_name" content="RorySpt 个人资料站">
-<meta property="og:description" content="项目地址">
+<meta property="og:description" content="问答缓冲绑定点是什么？缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Binding">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-27T11:13:02.000Z">
-<meta property="article:modified_time" content="2023-06-30T12:04:09.368Z">
+<meta property="article:published_time" content="2023-07-04T11:39:39.000Z">
+<meta property="article:modified_time" content="2023-07-04T11:44:23.127Z">
 <meta property="article:author" content="RorySpt">
 <meta property="article:tag" content="OpenGL">
 <meta property="article:tag" content="Learn">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/06/27/learn-opengl/project-setting/">
+<link rel="canonical" href="http://example.com/2023/07/04/learn-opengl/basic-knowledge/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/06/27/learn-opengl/project-setting/","path":"2023/06/27/learn-opengl/project-setting/","title":"[Learn OpenGL] 项目配置"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/07/04/learn-opengl/basic-knowledge/","path":"2023/07/04/learn-opengl/basic-knowledge/","title":"[Learn OpenGL] 基础知识"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Learn OpenGL] 项目配置 | RorySpt 个人资料站</title>
+<title>[Learn OpenGL] 基础知识 | RorySpt 个人资料站</title>
   
 
 
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CMake%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C"><span class="nav-number">2.</span> <span class="nav-text">CMake使用经验</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E7%AD%94"><span class="nav-number">1.</span> <span class="nav-text">问答</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E7%BB%91%E5%AE%9A%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">缓冲绑定点是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opengl%E7%8A%B6%E6%80%81%E6%9C%BA%E5%86%85%E9%83%A8%E6%95%B0%E6%8D%AE%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%86%E5%B8%83%E7%9A%84%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">opengl状态机内部数据是如何分布的？</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -223,7 +223,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/27/learn-opengl/project-setting/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/04/learn-opengl/basic-knowledge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://s2.loli.net/2023/06/24/f3Z9uOABbP8TmqN.gif">
@@ -236,12 +236,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Learn OpenGL] 项目配置 | RorySpt 个人资料站">
+      <meta itemprop="name" content="[Learn OpenGL] 基础知识 | RorySpt 个人资料站">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [Learn OpenGL] 项目配置
+          [Learn OpenGL] 基础知识
         </h1>
 
         <div class="post-meta-container">
@@ -251,15 +251,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-06-27 19:13:02" itemprop="dateCreated datePublished" datetime="2023-06-27T19:13:02+08:00">2023-06-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-30 20:04:09" itemprop="dateModified" datetime="2023-06-30T20:04:09+08:00">2023-06-30</time>
+      <time title="创建时间：2023-07-04 19:39:39 / 修改时间：19:44:23" itemprop="dateCreated datePublished" datetime="2023-07-04T19:39:39+08:00">2023-07-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,8 +285,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2023/06/27/learn-opengl/project-setting/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/06/27/learn-opengl/project-setting/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/07/04/learn-opengl/basic-knowledge/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -305,8 +299,8 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="[Learn OpenGL] 项目配置" href="/2023/06/27/learn-opengl/project-setting/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::55dea54be0405217c644670abb7d9dfb" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="[Learn OpenGL] 基础知识" href="/2023/07/04/learn-opengl/basic-knowledge/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::11ec1ac5bcb84965317a8d12120e1faa" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -317,14 +311,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>144</span>
+      <span>896</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -334,29 +328,25 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><strong><a target="_blank" rel="noopener" href="https://gitee.com/roryspt/opengl-learn/tree/opengl-learn-old">项目地址</a></strong></p>
-<span id="more"></span>
-
-
-
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
-<li><p>找到了glfw模块但是对应的变量没有定义</p>
-<p>使用以下代码</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">find_package</span>(glfw3 CONFIG REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(sandbox PRIVATE glfw)</span><br><span class="line"></span><br><span class="line"><span class="keyword">message</span>(GLFW_FOUND <span class="variable">$&#123;GLFW_FOUND&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(GLFW_INCLUDE_DIR <span class="variable">$&#123;GLFW_INCLUDE_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(GLFW_SOURCES <span class="variable">$&#123;GLFW_SOURCES&#125;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">message</span>(GLFW3_FOUND <span class="variable">$&#123;GLFW3_FOUND&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(GLFW3_INCLUDE_DIR <span class="variable">$&#123;GLFW3_INCLUDE_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(GLFW3_SOURCES <span class="variable">$&#123;GLFW3_SOURCES&#125;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>message里的变量都为空，但是<code>target_link_libraries(sandbox PRIVATE glfw)</code>能够成功执行</p>
-<p>glfw库使用以下命令安装：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vcpkg install glfw3:x64<span class="literal">-windows</span></span><br></pre></td></tr></table></figure></li>
+    <div class="post-body" itemprop="articleBody"><h1 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h1><h2 id="缓冲绑定点是什么？"><a href="#缓冲绑定点是什么？" class="headerlink" title="缓冲绑定点是什么？"></a>缓冲绑定点是什么？</h2><p>缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。</p>
+<p>在OpenGL中，常见的缓冲绑定点包括：</p>
+<ol>
+<li>顶点缓冲对象绑定点（Vertex Buffer Object Binding Point）：用于将顶点缓冲对象绑定到顶点属性的位置，以供顶点着色器读取顶点数据。</li>
+<li>索引缓冲对象绑定点（Index Buffer Object Binding Point）：用于将索引缓冲对象绑定到绘制命令中的索引数据位置，以供绘制命令使用。</li>
+<li>Uniform缓冲对象绑定点（Uniform Buffer Object Binding Point）：用于将Uniform缓冲对象绑定到着色器程序中的Uniform变量位置，以供着色器程序读取Uniform数据。</li>
+<li>纹理缓冲对象绑定点（Texture Buffer Object Binding Point）：用于将纹理缓冲对象绑定到纹理单元，以供着色器程序读取纹理数据。</li>
 </ol>
-<h1 id="CMake使用经验"><a href="#CMake使用经验" class="headerlink" title="CMake使用经验"></a>CMake使用经验</h1><ol>
-<li><p>用文件夹来组织目标 (target)</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set_property</span>(GLOBAL PROPERTY USE_FOLDERS <span class="keyword">ON</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改source_group时，vs需要重新打开才能看到效果</p>
-</li>
-<li><p>多核编译</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_compile_options</span>(<span class="keyword">target</span> PUBLIC <span class="string">&quot;/MP&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<p>在使用缓冲对象时，我们需要将缓冲对象绑定到相应的缓冲绑定点上，这样OpenGL才能正确地使用缓冲对象中的数据。而绑定缓冲对象则是通过使用对应的glBindBuffer函数实现的。</p>
+<h2 id="opengl状态机内部数据是如何分布的？"><a href="#opengl状态机内部数据是如何分布的？" class="headerlink" title="opengl状态机内部数据是如何分布的？"></a>opengl状态机内部数据是如何分布的？</h2><p>OpenGL的内部状态由一系列数据和状态变量组成，这些变量存储了OpenGL的各种配置选项、当前绑定的对象和各种状态信息。下面是一些常见的OpenGL状态：</p>
+<ol>
+<li>渲染管线状态（Pipeline State）：包括顶点输入状态、光栅化状态、片段处理状态等。这些状态存储了OpenGL的渲染管线各个阶段的配置选项和设置。</li>
+<li>缓冲绑定状态（Buffer Binding State）：存储了顶点缓冲对象、索引缓冲对象和Uniform缓冲对象等的绑定信息。这些状态记录了当前绑定的缓冲对象的相关属性和数据。</li>
+<li>纹理绑定状态（Texture Binding State）：存储了纹理对象的绑定信息，包括2D纹理、立方体贴图、多重采样纹理等。这些状态记录了当前绑定的纹理对象的相关属性和数据。</li>
+<li>着色器程序状态（Shader Program State）：存储了当前着色器程序的相关信息，包括顶点着色器、片段着色器、几何着色器等。这些状态记录了当前使用的着色器程序的相关属性和数据。</li>
+<li>内存管理状态（Memory Management State）：存储了OpenGL中的内存对象，包括帧缓冲对象、渲染缓冲对象等。这些状态记录了当前内存对象的相关属性和数据。</li>
+<li>视口状态（Viewport State）：存储了OpenGL绘制的视口的相关信息，包括视口的位置和大小。这些状态记录了当前视口的相关属性和数据。</li>
 </ol>
+<p>这些状态和数据被保存在OpenGL当前的上下文中。当我们使用OpenGL API来修改这些状态时，实际上是在修改当前上下文中的对应变量的值。因此，在使用OpenGL时，我们通常会对这些状态进行配置和修改，以达到期望的渲染效果。</p>
 
     </div>
 
@@ -374,14 +364,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/24/homepage/" rel="prev" title="初次建站">
-                  <i class="fa fa-chevron-left"></i> 初次建站
+                <a href="/2023/07/03/modern-cpp/modern-cpp-usages/" rel="prev" title="modern c++ usages">
+                  <i class="fa fa-chevron-left"></i> modern c++ usages
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/06/27/myproject/" rel="next" title="个人项目">
-                  个人项目 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -407,7 +394,7 @@
   
             </div>
             <div class="tab-pane changyan" id="comment-changyan">
-              <div class="comments" id="SOHUCS" sid="55dea54be0405217c644670abb7d9dfb"></div>
+              <div class="comments" id="SOHUCS" sid="11ec1ac5bcb84965317a8d12120e1faa"></div>
             </div>
         </div>
       </div>
