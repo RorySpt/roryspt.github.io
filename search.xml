@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Learn OpenGL] 项目详情</title>
+      <link href="/2023/07/04/learn-opengl/project-details/"/>
+      <url>/2023/07/04/learn-opengl/project-details/</url>
+      
+        <content type="html"><![CDATA[<h1 id="组织"><a href="#组织" class="headerlink" title="组织"></a>组织</h1><p>项目sandbox包含以下内容</p><ul><li>display window 封装了窗口相关内容，包含opengl初始化，GLFW初始化，IMGUI初始化，窗口事件等</li><li>render 实现渲染相关内容，具体绘制</li><li>world 代表场景，存放光源（lightsource）、相机（camera）、渲染实体（model）等，它们都以actor实现</li><li>actor 放置在场景里面的所有实体都是actor</li><li>lightsource 对光源的抽象</li><li>camera 对相机的抽象，每个相机对应一个render </li><li>model 可绘制模型</li><li>shader 着色器的抽象，包含顶点着色器和片段着色器</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn OpenGL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenGL </tag>
+            
+            <tag> Learn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[Learn OpenGL] 基础知识</title>
       <link href="/2023/07/04/learn-opengl/basic-knowledge/"/>
       <url>/2023/07/04/learn-opengl/basic-knowledge/</url>
@@ -22,9 +51,9 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> OpenGL </tag>
+            
+            <tag> Learn </tag>
             
         </tags>
       
@@ -51,9 +80,9 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> c++ </tag>
             
         </tags>
       
@@ -105,9 +134,9 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> OpenGL </tag>
+            
+            <tag> Learn </tag>
             
         </tags>
       

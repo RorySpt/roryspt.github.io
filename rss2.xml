@@ -9,8 +9,40 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Tue, 04 Jul 2023 11:47:08 GMT</pubDate>
+    <pubDate>Tue, 04 Jul 2023 12:58:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[Learn OpenGL] 项目详情</title>
+      <link>http://example.com/2023/07/04/learn-opengl/project-details/</link>
+      <guid>http://example.com/2023/07/04/learn-opengl/project-details/</guid>
+      <pubDate>Tue, 04 Jul 2023 12:47:04 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;组织&quot;&gt;&lt;a href=&quot;#组织&quot; class=&quot;headerlink&quot; title=&quot;组织&quot;&gt;&lt;/a&gt;组织&lt;/h1&gt;&lt;p&gt;项目sandbox包含以下内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;display window 封装了窗口相关内容，包含opengl初始化，GLFW</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="组织"><a href="#组织" class="headerlink" title="组织"></a>组织</h1><p>项目sandbox包含以下内容</p><ul><li>display window 封装了窗口相关内容，包含opengl初始化，GLFW初始化，IMGUI初始化，窗口事件等</li><li>render 实现渲染相关内容，具体绘制</li><li>world 代表场景，存放光源（lightsource）、相机（camera）、渲染实体（model）等，它们都以actor实现</li><li>actor 放置在场景里面的所有实体都是actor</li><li>lightsource 对光源的抽象</li><li>camera 对相机的抽象，每个相机对应一个render </li><li>model 可绘制模型</li><li>shader 着色器的抽象，包含顶点着色器和片段着色器</li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/Learn/">Learn</category>
+      
+      <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
+      
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      
+      <comments>http://example.com/2023/07/04/learn-opengl/project-details/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[Learn OpenGL] 基础知识</title>
@@ -33,9 +65,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread</comments>
@@ -63,9 +95,9 @@
       <category domain="http://example.com/categories/Learn/Learn-c/">Learn c++</category>
       
       
-      <category domain="http://example.com/tags/c/">c++</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/c/">c++</category>
       
       
       <comments>http://example.com/2023/07/03/modern-cpp/modern-cpp-usages/#disqus_thread</comments>
@@ -113,9 +145,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/06/27/learn-opengl/project-setting/#disqus_thread</comments>
