@@ -30,10 +30,10 @@
 <meta property="og:description" content="问答缓冲绑定点是什么？缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Binding">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-04T11:39:39.000Z">
-<meta property="article:modified_time" content="2023-07-04T11:44:23.127Z">
+<meta property="article:modified_time" content="2023-07-04T11:47:08.528Z">
 <meta property="article:author" content="RorySpt">
-<meta property="article:tag" content="OpenGL">
 <meta property="article:tag" content="Learn">
+<meta property="article:tag" content="OpenGL">
 <meta name="twitter:card" content="summary">
 
 
@@ -253,7 +253,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-07-04 19:39:39 / 修改时间：19:44:23" itemprop="dateCreated datePublished" datetime="2023-07-04T19:39:39+08:00">2023-07-04</time>
+      <time title="创建时间：2023-07-04 19:39:39 / 修改时间：19:47:08" itemprop="dateCreated datePublished" datetime="2023-07-04T19:39:39+08:00">2023-07-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,10 +283,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Disqus：</span>
+      <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="disqus" href="/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/07/04/learn-opengl/basic-knowledge/" itemprop="commentCount"></span>
+    <a title="[Learn OpenGL] 基础知识" href="/2023/07/04/learn-opengl/basic-knowledge/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::11ec1ac5bcb84965317a8d12120e1faa" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -297,10 +297,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Changyan：</span>
+      <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="[Learn OpenGL] 基础知识" href="/2023/07/04/learn-opengl/basic-knowledge/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::11ec1ac5bcb84965317a8d12120e1faa" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/07/04/learn-opengl/basic-knowledge/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -311,14 +311,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>896</span>
+      <span>1.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -347,6 +347,16 @@
 <li>视口状态（Viewport State）：存储了OpenGL绘制的视口的相关信息，包括视口的位置和大小。这些状态记录了当前视口的相关属性和数据。</li>
 </ol>
 <p>这些状态和数据被保存在OpenGL当前的上下文中。当我们使用OpenGL API来修改这些状态时，实际上是在修改当前上下文中的对应变量的值。因此，在使用OpenGL时，我们通常会对这些状态进行配置和修改，以达到期望的渲染效果。</p>
+<p>当我们使用OpenGL进行渲染时，需要对一些重要的状态进行配置和修改，以控制渲染的各个方面。下面是一些常见的OpenGL状态的详细说明：</p>
+<ol>
+<li>渲染管线状态（Pipeline State）：包括顶点输入状态、光栅化状态、片段处理状态等。顶点输入状态包括顶点属性缓冲对象的绑定、顶点属性的格式和布局等。光栅化状态包括光栅化模式、剔除模式、多边形模式等。片段处理状态包括混合模式、深度测试、模板测试等。通过配置这些状态，我们可以控制渲染管线各个阶段的行为。</li>
+<li>缓冲绑定状态（Buffer Binding State）：存储了顶点缓冲对象、索引缓冲对象和Uniform缓冲对象的绑定信息。顶点缓冲对象用于存储顶点数据，索引缓冲对象用于存储索引数据，Uniform缓冲对象用于存储着色器程序中的Uniform变量数据。通过绑定不同的缓冲对象，我们可以在渲染时使用不同的数据。</li>
+<li>纹理绑定状态（Texture Binding State）：存储了纹理对象的绑定信息，包括2D纹理、立方体贴图、多重采样纹理等。纹理对象用于存储图像数据，我们可以通过绑定不同的纹理对象来渲染不同的纹理。</li>
+<li>着色器程序状态（Shader Program State）：存储了当前着色器程序的相关信息，包括顶点着色器、片段着色器、几何着色器等。通过配置这些着色器程序，我们可以自定义渲染的算法和效果。</li>
+<li>内存管理状态（Memory Management State）：存储了OpenGL中的内存对象，包括帧缓冲对象、渲染缓冲对象等。通过配置这些内存对象，我们可以定义渲染的目标和方式。</li>
+<li>视口状态（Viewport State）：存储了OpenGL绘制的视口的相关信息，包括视口的位置和大小。通过配置视口，我们可以控制渲染的输出区域和分辨率。</li>
+</ol>
+<p>这些状态的配置和修改通常通过OpenGL API的函数来实现。在使用OpenGL时，我们需要根据具体的需求和场景，对这些状态进行适当的配置和修改，以获得期望的渲染效果。同时，我们还可以通过查询OpenGL的当前状态，了解当前渲染的相关信息，以便进行调试和优化。</p>
 
     </div>
 
@@ -356,8 +366,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
               <a href="/tags/Learn/" rel="tag"># Learn</a>
+              <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
           </div>
 
         
@@ -382,19 +392,19 @@
 
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-disqus">disqus</a></li>
             <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
         </ul>
         <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="11ec1ac5bcb84965317a8d12120e1faa"></div>
+            </div>
             <div class="tab-pane disqus" id="comment-disqus">
               
   <div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </div>
   
-            </div>
-            <div class="tab-pane changyan" id="comment-changyan">
-              <div class="comments" id="SOHUCS" sid="11ec1ac5bcb84965317a8d12120e1faa"></div>
             </div>
         </div>
       </div>
@@ -419,14 +429,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">7 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -494,10 +504,10 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"ge-ren-zi-liao-zhan","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 <script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cywK8ub0s","appkey":"9dc2e7c79fbcf50f0ea531e90b9122e0","count":true}</script>
 <script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"ge-ren-zi-liao-zhan","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>
