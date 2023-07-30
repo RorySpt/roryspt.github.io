@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>创建型模式</title>
+      <link href="/2023/07/30/design-patterns/creational-pattern/"/>
+      <url>/2023/07/30/design-patterns/creational-pattern/</url>
+      
+        <content type="html"><![CDATA[<p>在没有创建型设计模式的时候，在C++中创建对象的行为充满了危险。应该在栈上创建对象，还是应该在堆上创建？应该使用原始指针，使用unique或shared指针，还是应该彻底使用其他对象来管理创建的对象？还有一点，是手动创建对象更合适，还是说应当将包含所有关键信息的创建过程延迟到诸如工厂模式或者控制反转容器等特定的对象构造器中？</p><p>不论选择哪一种方式，创建对象仍旧是一项令人讨厌的工作，尤其是创建过程及其复杂或者需要遵守某些规定的时候。于是，创建型设计模式诞生了：它们是对象创建相关的通用方法。</p><h1 id="构造器模式"><a href="#构造器模式" class="headerlink" title="构造器模式"></a>构造器模式</h1><p>构造器（Builder）模式主要关注复杂对象的创建过程，复杂对象是指的难以通过调用单行构造函数来创建的对象。这些类型的对象本身可能由其他对象组成，并且可能涉及不太明显的逻辑，因此需要专门设计单独的组件来创建。</p><p>构造器模式地目的是简化复杂对象或者一系列对象的构建过程，从而单独定义构成该复杂对象的各个组件的构建方法。</p><ul><li>构造器模式可以通过流式接口调用链来实现复杂的构建过程。为了实现流式接口，构造器的函数需要返回this或*this。为了让构造器使用继承，父类构造器需要知道派生类的实际类型，以便返回实际类型的this，使用模板参数来传递</li><li>为了强调用户使用构造器的API，我们可以将目标对象的构造函数限制为不可访问，同时定义一个create()接口返回构造器。</li><li>通过定义适当的运算符，可以使构造器转换为对象本身。</li><li>借助C++新特性中的统一初始化语法，可以实现Groovy风格的构造器。这是一种很通用的方法，可以创建各式各样的DSL</li><li>单个构造器接口可以暴露出多个子构造器接口。通过灵活的使用继承和流式接口很容易将一个构造器变换为另一个构造器。</li></ul><p>当对象构建过程是非普通的时候，构造器模式是有意义的。对于那些通过数量有限且命名合理的构造函数参数来明确构造的简单对象而言，它们应该使用构造函数（或依赖注入），而不必使用构造器模式。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn Design Patterns </category>
+          
+          <category> Learn Creational Pattern </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Creational Pattern </tag>
+            
+            <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
+            
+            <tag> Reading Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SOLID 设计原则</title>
       <link href="/2023/07/29/design-patterns/solid/"/>
       <url>/2023/07/29/design-patterns/solid/</url>
