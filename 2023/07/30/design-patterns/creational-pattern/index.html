@@ -30,7 +30,7 @@
 <meta property="og:description" content="记录设计模式中的创建型模式">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-30T08:57:58.000Z">
-<meta property="article:modified_time" content="2023-08-03T02:58:57.267Z">
+<meta property="article:modified_time" content="2023-08-03T03:24:26.978Z">
 <meta property="article:author" content="RorySpt">
 <meta property="article:tag" content="Creational Pattern">
 <meta property="article:tag" content="Design Patterns">
@@ -146,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">构造器模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E5%92%8C%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82"><span class="nav-number">2.</span> <span class="nav-text">工厂方法和抽象工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">工厂方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82"><span class="nav-number">2.2.</span> <span class="nav-text">工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E5%92%8C%E5%A4%9A%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">工厂方法和多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E5%B7%A5%E5%8E%82"><span class="nav-number">2.4.</span> <span class="nav-text">嵌套工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82"><span class="nav-number">2.5.</span> <span class="nav-text">抽象工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E5%B7%A5%E5%8E%82"><span class="nav-number">2.6.</span> <span class="nav-text">函数式工厂</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">构造器模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E5%92%8C%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82"><span class="nav-number">2.</span> <span class="nav-text">工厂方法和抽象工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">工厂方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82"><span class="nav-number">2.2.</span> <span class="nav-text">工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E5%92%8C%E5%A4%9A%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">工厂方法和多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E5%B7%A5%E5%8E%82"><span class="nav-number">2.4.</span> <span class="nav-text">嵌套工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82"><span class="nav-number">2.5.</span> <span class="nav-text">抽象工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E5%B7%A5%E5%8E%82"><span class="nav-number">2.6.</span> <span class="nav-text">函数式工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E8%BF%BD%E8%B8%AA"><span class="nav-number">2.7.</span> <span class="nav-text">对象追踪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.8.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -261,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-03 10:58:57" itemprop="dateModified" datetime="2023-08-03T10:58:57+08:00">2023-08-03</time>
+      <time title="修改时间：2023-08-03 11:24:26" itemprop="dateModified" datetime="2023-08-03T11:24:26+08:00">2023-08-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -323,14 +323,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.4k</span>
+      <span>4.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -386,14 +386,34 @@
 <li>指一个类，这个类可以创建对象</li>
 <li>指一个函数，当调用这个函数时，可以创建一个对象。</li>
 </ul>
-<p>第二个概念并不是工厂方法的典型使用场景。如果传入function&lt;&gt;类型的参数（或者普通函数指针），该函数返回类型为T的变量，这也是一种工厂而不是工厂方法。</p>
+<p>第二个概念并不是工厂方法的典型使用场景。如果传入<code>function&lt;&gt;</code>类型的参数（或者普通函数指针），该函数返回类型为T的变量，这也是一种工厂而不是工厂方法。</p>
 <p>幸运的是，函数可以保存在变量中，这可以通过将工厂替换为函数块来实现。比如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DrinkFactory</span>&#123;</span><br><span class="line">	map&lt;string, std::function&lt;unique_ptr&lt;HotDrink&gt;()&gt;&gt; hot_factorys;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">DrinkFactory</span>()&#123;</span><br><span class="line">		hot_factorys.<span class="built_in">emplace</span>(<span class="string">&quot;coffee&quot;</span>, []()&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="built_in">make_unique</span>&lt;Coffee&gt;();</span><br><span class="line">		&#125;);</span><br><span class="line">		hot_factorys.<span class="built_in">emplace</span>(<span class="string">&quot;tea&quot;</span>, []()&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="built_in">make_unique</span>&lt;Tea&gt;();</span><br><span class="line">		&#125;);</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">unique_ptr&lt;HotDrink&gt; <span class="title">make_drink</span><span class="params">(string_view name)</span></span>&#123;</span><br><span class="line">		<span class="keyword">auto</span> drink = hot_factorys[name]();</span><br><span class="line">		...</span><br><span class="line">		<span class="keyword">return</span> drink;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <!--*它们和抽象工厂表达的行为是一致的，由类表现多态改为函数来实现多态* -->
 
-
-
+<h2 id="对象追踪"><a href="#对象追踪" class="headerlink" title="对象追踪"></a>对象追踪</h2><p>与调用构造函数相比，工厂更难使用（不像构造函数那么明确），如果能从工厂中获取某些便利就好了。使用工厂的一种便利是，可以追踪所有已经创建的对象。</p>
+<p>使用工厂的好处包括：</p>
+<ul>
+<li>可以知道已经创建的特定类型的对象数量。</li>
+<li>可以修改或者完全替换整个对象（在数学意义上）的创建过程</li>
+<li>如果使用智能指针，则可以通过观察对象的引用计数来获取对象在其他地方被引用的数量</li>
+</ul>
+<p>服务定位器或者反转容器可以采取这种对象追踪策略。这样容器可以以<code>shared_ptr</code>的形式构建对象，但在内部以<code>weak_ptr</code>的形式管理，这样既可以观察对象状态，又可以在运行时完全替换为新的对象</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>工厂方法：类的成员函数，用于创建对象。它通常可以替换构造函数</li>
+<li>工厂：一个类，它知道如何创建对象。不过，如果我们给一个函数传入可创建的对象的参数（如函数或者类似的“对象”），那么这个参数也被称为工厂</li>
+<li>抽象工厂：正如其名称所表示的意义，抽象类可以被具体类的类继承，由此产生了一个工厂类族。实际开发中抽象工厂很少见。</li>
+</ul>
+<p>相比调用构造函数，使用工厂有几个关键优势，即：</p>
+<ul>
+<li>工厂方法可以拒绝构建对象，也就是说，工厂可以返回默认初始化的智能指针，可以返回<code>optional&lt;T&gt;</code>或者空指针<code>nullptr</code>，而不是必须返回一个对象。</li>
+<li>工厂方法可以是多态的，因此工厂方法可以返回基类或者基类的指针。使用其他方式（比如使用variant），工厂方法还可以支持返回不同的数据类型</li>
+<li>与构造函数命名不同，工厂方法的命名不受约束并且可以更有意义，我们可以将其命名为任何名称。</li>
+<li>工厂可以实现缓存和其他存储优化；对于诸如池或者单例模式之类的方法来说，这也是一种不错的选择</li>
+<li>工厂可以将对象不同的关注点内容（比如验证代码）封装（即关注点分离）</li>
+</ul>
+<p>工厂模式与构造器模式的差别在于，使用工厂模式，我们可以一次创建一个完整的对象；而使用构造器模式，则需要分步提供对象的部分信息才能逐步完成一个对象的构建。</p>
 
     </div>
 
@@ -468,14 +488,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">13k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">12 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
