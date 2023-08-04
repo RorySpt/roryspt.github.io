@@ -9,8 +9,30 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>不积跬步，无以至千里；不积小流，无以成江海</description>
-    <pubDate>Thu, 03 Aug 2023 03:30:30 GMT</pubDate>
+    <pubDate>Fri, 04 Aug 2023 15:27:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/2023/08/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</link>
+      <guid>http://example.com/2023/08/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</guid>
+      <pubDate>Fri, 04 Aug 2023 12:57:43 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;线性代数中的线性方程组&quot;&gt;&lt;a href=&quot;#线性代数中的线性方程组&quot; class=&quot;headerlink&quot; title=&quot;线性代数中的线性方程组&quot;&gt;&lt;/a&gt;线性代数中的线性方程组&lt;/h1&gt;&lt;p&gt;线性方程组是线性代数的核心，下面通过简单而具体的设置来引入线性代数的</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="线性代数中的线性方程组"><a href="#线性代数中的线性方程组" class="headerlink" title="线性代数中的线性方程组"></a>线性代数中的线性方程组</h1><p>线性方程组是线性代数的核心，下面通过简单而具体的设置来引入线性代数的许多重要概念</p><h2 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h2><p>包含变量$x_1,x_2,\cdots,x_n$的<strong>线性方程</strong>是形如 $a_1x_1+a_2x_2+\dots+a_nx_n&#x3D;b$ 的方程，其中b与系数$a_1,a_2,\dots,a_n$是实数或者复数，通常是已知数。下标n可以是任意正整数。</p><p><strong>线性方程组</strong>是由一个或者几个包含相同变量$x_1,x_2,\cdots,x_n$的线性方程组成的。线性方程组的解是一组数$(s_1,s_2,\dots,s_n)$，用这组数分别代替$x_1,x_2,\cdots,x_n$时所有的方程的两边相等。</p><p>方程组所有可能的解的集合称为线性方程组的解集。若两个线性方程组有相同的解集，则这两个线性方程组称为<strong>等价的</strong>。也就是说，第一个方程组的每个解都是第二个方程组的解，第二个方程组的每个解都是第一个方程组的解</p><blockquote><p>线性方程组的解有下列三种情况：</p><ol><li>无解</li><li>有唯一解</li><li>有无穷多解</li></ol></blockquote><p>我们称一个线性方程组是<strong>相容的</strong>，若他又一个解或者无穷多个解；称他是<strong>不相容的</strong>，若它无解。</p><h3 id="矩阵记号"><a href="#矩阵记号" class="headerlink" title="矩阵记号"></a>矩阵记号</h3><p>一个线性方程组包含的主要信息可以用一个称为<strong>矩阵</strong>的紧凑的矩阵阵列表示<a href="%E5%8F%8D%E8%BF%87%E6%9D%A5%E8%AF%B4%E7%9F%A9%E9%98%B5%E6%98%AF%E8%A1%A8%E7%A4%BA%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E4%B8%BB%E8%A6%81%E4%BF%A1%E6%81%AF%E7%9A%84%E7%9F%A9%E9%98%B5%E9%98%B5%E5%88%97">^1</a>。给出方程组<br>$$<br>\begin{align}<br>x_1-2x_2+1x_3&amp;&#x3D;0\<br>+2x_2-8x_3&amp;&#x3D;8\<br>5x_1;;;;;;;;;;+5x_3&amp;&#x3D;10<br>\end{align}\tag3<br>$$</p><p>把每一个变量的系数写在对齐的一行中，矩阵<br>$$<br>\begin{bmatrix}<br>1&amp;-2&amp;1\<br>0&amp;2&amp;-8\<br>5&amp;0&amp;-5<br>\end{bmatrix}<br>$$<br>称为方程组 (3) 的<strong>系数矩阵</strong>，而<br>$$<br>\begin{bmatrix}<br>1&amp;-2&amp;1&amp;0\<br>0&amp;2&amp;-8&amp;8\<br>5&amp;0&amp;-5&amp;10<br>\end{bmatrix}\tag4<br>$$<br>称为它的<strong>增广矩阵</strong>。方程组的增广矩阵是把它的系数矩阵添上一列所得，这一列是由方程组右边常数组成的。</p><p>矩阵的<strong>维数</strong>说明它包含行数和列数。上面的增广矩阵（4）有3行4列，称为$3\times4$（读作3行4列）矩阵。若m，n为正整数，$m\times n$矩阵是一个有m行n列的数的矩阵阵列。（行数写在前面。）矩阵记号为解方程组带来便利。</p><h3 id="解线性方程组"><a href="#解线性方程组" class="headerlink" title="解线性方程组"></a>解线性方程组</h3><p>解线性方程组的一般方法的基本思路是把方程组用一个更容易解的等价方程组（即有相同解集的方程组）代替。</p><p>粗略地说，我们用方程组中第一个方程中含$x_1$的项消去其他方程中含x1的项。然后用第二个方程中含$x_2$的项消去其他方程中含$x_2$的项，以此类推。最后我们得到一个很简单的等价方程组。</p><p>用来简化线性方程组的三种基本变换是：把某个方程换成它与另一个方程倍数的和；交换两个方程的位置；把某一个方程的所有项乘以一个非零常数。</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2023/08/04/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>创建型模式</title>
@@ -32,13 +54,13 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
-      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
-      
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
       <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
+      
+      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
       
       
       <comments>http://example.com/2023/07/30/design-patterns/creational-pattern/#disqus_thread</comments>
@@ -262,25 +284,6 @@
       
       
       <comments>http://example.com/2023/06/24/homepage/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://example.com/2023/06/23/hello-world/</link>
-      <guid>http://example.com/2023/06/23/hello-world/</guid>
-      <pubDate>Thu, 22 Jun 2023 16:04:41 GMT</pubDate>
-      
-      <description>This is an automatically generated document</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content:encoded>
-      
-      
-      
-      
-      <comments>http://example.com/2023/06/23/hello-world/#disqus_thread</comments>
       
     </item>
     
