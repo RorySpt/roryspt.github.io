@@ -85,13 +85,13 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
+      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
       
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
-      <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
-      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
+      <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
       
       <comments>http://example.com/2023/07/30/design-patterns/creational-pattern/#disqus_thread</comments>
@@ -116,9 +116,9 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/">Learn Design Patterns</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -179,9 +179,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/project-details/#disqus_thread</comments>
@@ -210,9 +210,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread</comments>
@@ -291,9 +291,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
       
       
       <comments>http://example.com/2023/06/27/learn-opengl/project-setting/#disqus_thread</comments>
