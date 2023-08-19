@@ -22,18 +22,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="问答缓冲绑定点是什么？缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Binding">
+    <meta name="description" content="问答  缓冲绑定点是什么？ 缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Bind">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Learn OpenGL] 基础知识">
 <meta property="og:url" content="http://example.com/2023/07/04/learn-opengl/basic-knowledge/index.html">
 <meta property="og:site_name" content="RorySpt 个人资料站">
-<meta property="og:description" content="问答缓冲绑定点是什么？缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Binding">
+<meta property="og:description" content="问答  缓冲绑定点是什么？ 缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。 在OpenGL中，常见的缓冲绑定点包括：  顶点缓冲对象绑定点（Vertex Buffer Object Bind">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-04T11:39:39.000Z">
 <meta property="article:modified_time" content="2023-07-04T12:44:26.005Z">
 <meta property="article:author" content="RorySpt">
-<meta property="article:tag" content="Learn">
 <meta property="article:tag" content="OpenGL">
+<meta property="article:tag" content="Learn">
 <meta name="twitter:card" content="summary">
 
 
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E7%AD%94"><span class="nav-number">1.</span> <span class="nav-text">问答</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E7%BB%91%E5%AE%9A%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">缓冲绑定点是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opengl%E7%8A%B6%E6%80%81%E6%9C%BA%E5%86%85%E9%83%A8%E6%95%B0%E6%8D%AE%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%86%E5%B8%83%E7%9A%84%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">opengl状态机内部数据是如何分布的？</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E7%AD%94"><span class="nav-number">1.</span> <span class="nav-text"> 问答</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E7%BB%91%E5%AE%9A%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text"> 缓冲绑定点是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opengl%E7%8A%B6%E6%80%81%E6%9C%BA%E5%86%85%E9%83%A8%E6%95%B0%E6%8D%AE%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%86%E5%B8%83%E7%9A%84"><span class="nav-number">1.2.</span> <span class="nav-text"> opengl状态机内部数据是如何分布的？</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,7 +328,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="问答"><a href="#问答" class="headerlink" title="问答"></a>问答</h1><h2 id="缓冲绑定点是什么？"><a href="#缓冲绑定点是什么？" class="headerlink" title="缓冲绑定点是什么？"></a>缓冲绑定点是什么？</h2><p>缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="问答"><a class="markdownIt-Anchor" href="#问答"></a> 问答</h1>
+<h2 id="缓冲绑定点是什么"><a class="markdownIt-Anchor" href="#缓冲绑定点是什么"></a> 缓冲绑定点是什么？</h2>
+<p>缓冲绑定点是OpenGL中用于绑定缓冲对象的位置或目标。缓冲对象可以存储各种类型的数据，如顶点数据、索引数据、Uniform数据等。缓冲绑定点提供了一种将指定类型的缓冲对象与特定的目标位置相关联的方式，使得OpenGL可以正确地使用这些缓冲对象中的数据。</p>
 <p>在OpenGL中，常见的缓冲绑定点包括：</p>
 <ol>
 <li>顶点缓冲对象绑定点（Vertex Buffer Object Binding Point）：用于将顶点缓冲对象绑定到顶点属性的位置，以供顶点着色器读取顶点数据。</li>
@@ -337,7 +339,8 @@
 <li>纹理缓冲对象绑定点（Texture Buffer Object Binding Point）：用于将纹理缓冲对象绑定到纹理单元，以供着色器程序读取纹理数据。</li>
 </ol>
 <p>在使用缓冲对象时，我们需要将缓冲对象绑定到相应的缓冲绑定点上，这样OpenGL才能正确地使用缓冲对象中的数据。而绑定缓冲对象则是通过使用对应的glBindBuffer函数实现的。</p>
-<h2 id="opengl状态机内部数据是如何分布的？"><a href="#opengl状态机内部数据是如何分布的？" class="headerlink" title="opengl状态机内部数据是如何分布的？"></a>opengl状态机内部数据是如何分布的？</h2><p>OpenGL的内部状态由一系列数据和状态变量组成，这些变量存储了OpenGL的各种配置选项、当前绑定的对象和各种状态信息。下面是一些常见的OpenGL状态：</p>
+<h2 id="opengl状态机内部数据是如何分布的"><a class="markdownIt-Anchor" href="#opengl状态机内部数据是如何分布的"></a> opengl状态机内部数据是如何分布的？</h2>
+<p>OpenGL的内部状态由一系列数据和状态变量组成，这些变量存储了OpenGL的各种配置选项、当前绑定的对象和各种状态信息。下面是一些常见的OpenGL状态：</p>
 <ol>
 <li>渲染管线状态（Pipeline State）：包括顶点输入状态、光栅化状态、片段处理状态等。这些状态存储了OpenGL的渲染管线各个阶段的配置选项和设置。</li>
 <li>缓冲绑定状态（Buffer Binding State）：存储了顶点缓冲对象、索引缓冲对象和Uniform缓冲对象等的绑定信息。这些状态记录了当前绑定的缓冲对象的相关属性和数据。</li>
@@ -366,8 +369,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Learn/" rel="tag"># Learn</a>
               <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
+              <a href="/tags/Learn/" rel="tag"># Learn</a>
           </div>
 
         

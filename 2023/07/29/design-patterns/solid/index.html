@@ -32,8 +32,8 @@
 <meta property="article:published_time" content="2023-07-29T03:14:22.000Z">
 <meta property="article:modified_time" content="2023-07-29T05:50:36.232Z">
 <meta property="article:author" content="RorySpt">
-<meta property="article:tag" content="Design Patterns">
 <meta property="article:tag" content="Learn">
+<meta property="article:tag" content="Design Patterns">
 <meta property="article:tag" content="Reading Note">
 <meta name="twitter:card" content="summary">
 
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">单一职责原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">开闭原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99"><span class="nav-number">3.</span> <span class="nav-text">里氏替换原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99"><span class="nav-number">4.</span> <span class="nav-text">接口隔离原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text">依赖倒转原则</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text"> 单一职责原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text"> 开闭原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99"><span class="nav-number">3.</span> <span class="nav-text"> 里氏替换原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99"><span class="nav-number">4.</span> <span class="nav-text"> 接口隔离原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text"> 依赖倒转原则</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -339,14 +339,19 @@
 <li>依赖倒转原则（Dependency Inversion Principle，DIP）</li>
 </ul>
 <p>这些原则是Robert C. Martin 在21世纪初提出的——实际上，这只是从Robert的著作和博客中阐述的几十条原则中选出来的5条</p>
-<h1 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h1><p>每个类只有一个职责，因此也只有一个修改该类的原因（即只有该职责变化时，该类才做相应的修改）</p>
+<h1 id="单一职责原则"><a class="markdownIt-Anchor" href="#单一职责原则"></a> 单一职责原则</h1>
+<p>每个类只有一个职责，因此也只有一个修改该类的原因（即只有该职责变化时，该类才做相应的修改）</p>
 <p>违背单一职责原则的一个极端的反面模式被称为上帝对象（God Object）。上帝对象指的是承担了尽可能多的职责的庞大的类，是一个极其难以对付的庞大的“怪物”！</p>
 <p>反面模式也是一种模式，不幸的是，他经常出现在代码中，以至于被广泛的认识。模式和反面模式的区别在于，反面模式通常是糟糕的设计的典型案例，它会导致代码难以理解，难以维护和难以重构。</p>
-<h1 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h1><p>开闭原则要求软件对拓展开放，对修改关闭。开闭原则的主旨是，我们不必返回到已编写和测试的代码来修改它。</p>
-<h1 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h1><p>以 Barbara Liskov 命名的里氏替换原则指出，如果某个接口以基类Parent类型的对象为参数，那么他应该同等地接受子类Child类对象作为参数，并且程序不会产生任何异常</p>
+<h1 id="开闭原则"><a class="markdownIt-Anchor" href="#开闭原则"></a> 开闭原则</h1>
+<p>开闭原则要求软件对拓展开放，对修改关闭。开闭原则的主旨是，我们不必返回到已编写和测试的代码来修改它。</p>
+<h1 id="里氏替换原则"><a class="markdownIt-Anchor" href="#里氏替换原则"></a> 里氏替换原则</h1>
+<p>以 Barbara Liskov 命名的里氏替换原则指出，如果某个接口以基类Parent类型的对象为参数，那么他应该同等地接受子类Child类对象作为参数，并且程序不会产生任何异常</p>
 <p>如果子类重写了父类方法，处理父类的函数如果依赖父类中的该方法，其用于处理子类时就可能会出现异常</p>
-<h1 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h1><p>接口隔离原则的基本思想是将复杂的接口分离为多个单独的接口，以避免强制实现者必须实现某些它们并不需要的接口。任何时候，当我们要为某个复杂的应用程序编写插件时，如果要基于某个包含20个复杂功能的接口并且大部分接口实际上没有任何操作仅仅返回nullptr进行开发，那么这个API设计者很可能违背了接口隔离原则。</p>
-<h1 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h1><p>依赖倒转原则的原始定义如下几点：</p>
+<h1 id="接口隔离原则"><a class="markdownIt-Anchor" href="#接口隔离原则"></a> 接口隔离原则</h1>
+<p>接口隔离原则的基本思想是将复杂的接口分离为多个单独的接口，以避免强制实现者必须实现某些它们并不需要的接口。任何时候，当我们要为某个复杂的应用程序编写插件时，如果要基于某个包含20个复杂功能的接口并且大部分接口实际上没有任何操作仅仅返回nullptr进行开发，那么这个API设计者很可能违背了接口隔离原则。</p>
+<h1 id="依赖倒转原则"><a class="markdownIt-Anchor" href="#依赖倒转原则"></a> 依赖倒转原则</h1>
+<p>依赖倒转原则的原始定义如下几点：</p>
 <ul>
 <li>高层模块不应该依赖低层模块，它们都应该依赖抽象接口。</li>
 <li>抽象接口不应该依赖细节，细节应该依赖抽象接口。</li>
@@ -360,8 +365,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Design-Patterns/" rel="tag"># Design Patterns</a>
               <a href="/tags/Learn/" rel="tag"># Learn</a>
+              <a href="/tags/Design-Patterns/" rel="tag"># Design Patterns</a>
               <a href="/tags/Reading-Note/" rel="tag"># Reading Note</a>
           </div>
 
