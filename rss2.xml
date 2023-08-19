@@ -37,7 +37,7 @@
       
       
       
-      <content:encoded><![CDATA[<h1 id="Rodrigues’-Rotation-Formula"><a href="#Rodrigues’-Rotation-Formula" class="headerlink" title="Rodrigues’ Rotation Formula"></a>Rodrigues’ Rotation Formula</h1><p>Rotation by angle $\alpha$ around axis $\textbf{n}$<br>$$<br>\textbf{R}(\textbf{n},\alpha) &#x3D; cos(\alpha)\textbf{I} + (1 - cos(\alpha)\textbf{nn}^T) + sin(\alpha)<br>\underbrace{<br>\begin{pmatrix}<br>0 &amp; -n_z &amp; n_y \<br>n_z &amp; 0 &amp; -n_x \<br>-n_y &amp; n_x &amp; 0<br>\end{pmatrix} }_\textbf{N}<br>$$</p><h1 id="Orthographic-Projection"><a href="#Orthographic-Projection" class="headerlink" title="Orthographic Projection"></a>Orthographic Projection</h1><p>Translate (<strong>center</strong> to origin) <font color=Peru>first</font>, then scale (length&#x2F;width&#x2F;height to <strong>2</strong>)<br>$$<br>M_{ortho} &#x3D;<br>\begin{bmatrix}<br>\frac{2}{r-l} &amp;0&amp;0&amp;0\<br>0&amp;\frac{2}{t-b}&amp;0&amp;0\<br>0&amp;0&amp;\frac{2}{n-f}&amp;0\<br>0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>\begin{bmatrix}<br>0&amp;0&amp;0&amp;-\frac{r+l}{2}\<br>0&amp;0&amp;0&amp;-\frac{t+b}{2}\<br>0&amp;0&amp;0&amp;-\frac{n+f}{2}\<br>0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>$$</p><ul><li><strong>Caveat</strong><ul><li>Looking at &#x2F; along -Z is making near and far not intuitive (n &gt; f) </li><li>FYI: that’s why OpenGL (a Graphics API) uses left hand coords.</li></ul></li></ul><h1 id="Perspective-Projection"><a href="#Perspective-Projection" class="headerlink" title="Perspective Projection"></a>Perspective Projection</h1><ol><li>First “squish” the frustum into a cuboid ($n -&gt; n, f-&gt; f$)($M_{persp}-&gt;ortho$)</li><li>Do orthographic projection ($M_{ortho}$, already known!)</li></ol><details> <summary>过程</summary> <p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819182429668.png"></p><ul><li><strong>In order to find a transformation</strong><ul><li>Precall the key idea: Find the relationship between transformed points ($x^,,y^,,z^,$) and the original points ($x,y,z$)</li></ul></li></ul><p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819182909928.png"></p><p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819182953853.png"></p><p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819183018965.png"></p><p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819183056277.png"></p><p><img src="/2023/08/19/mathematics/some_mathematical_formulas/image-20230819183126120.png"></p></details><p>结果：<br>$$<br>M_{frutum-&gt;cuboid} &#x3D;<br>\begin{bmatrix}<br>n&amp;0&amp;0&amp;0\<br>0&amp;n&amp;0&amp;0\<br>0&amp;0&amp;n+f&amp;-nf\<br>0&amp;0&amp;1&amp;0\<br>\end{bmatrix}<br>$$</p>]]></content:encoded>
+      <content:encoded><![CDATA[<h1 id="Rodrigues’-Rotation-Formula"><a href="#Rodrigues’-Rotation-Formula" class="headerlink" title="Rodrigues’ Rotation Formula"></a>Rodrigues’ Rotation Formula</h1><p>Rotation by angle $\alpha$ around axis $\textbf{n}$<br>$$<br>\textbf{R}(\textbf{n},\alpha) &#x3D; cos(\alpha)\textbf{I} + (1 - cos(\alpha)\textbf{nn}^T) + sin(\alpha)<br>\underbrace{<br>\begin{pmatrix}<br>0 &amp; -n_z &amp; n_y \<br>n_z &amp; 0 &amp; -n_x \<br>-n_y &amp; n_x &amp; 0<br>\end{pmatrix} }_\textbf{N}<br>$$</p><h1 id="Orthographic-Projection"><a href="#Orthographic-Projection" class="headerlink" title="Orthographic Projection"></a>Orthographic Projection</h1><p>Translate (<strong>center</strong> to origin) <font color=Peru>first</font>, then scale (length&#x2F;width&#x2F;height to <strong>2</strong>)<br>$$<br>M_{ortho} &#x3D;<br>\begin{bmatrix}<br>\frac{2}{r-l} &amp;0&amp;0&amp;0\<br>0&amp;\frac{2}{t-b}&amp;0&amp;0\<br>0&amp;0&amp;\frac{2}{n-f}&amp;0\<br>0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>\begin{bmatrix}<br>0&amp;0&amp;0&amp;-\frac{r+l}{2}\<br>0&amp;0&amp;0&amp;-\frac{t+b}{2}\<br>0&amp;0&amp;0&amp;-\frac{n+f}{2}\<br>0&amp;0&amp;0&amp;1\<br>\end{bmatrix}<br>$$</p><ul><li><strong>Caveat</strong><ul><li>Looking at &#x2F; along -Z is making near and far not intuitive (n &gt; f) </li><li>FYI: that’s why OpenGL (a Graphics API) uses left hand coords.</li></ul></li></ul><h1 id="Perspective-Projection"><a href="#Perspective-Projection" class="headerlink" title="Perspective Projection"></a>Perspective Projection</h1><ol><li>First “squish” the frustum into a cuboid ($n -&gt; n, f-&gt; f$)($M_{persp}-&gt;ortho$)</li><li>Do orthographic projection ($M_{ortho}$, already known!)</li></ol><details> <summary>过程</summary> <p><img src="/image-20230819182429668.png"></p><ul><li><strong>In order to find a transformation</strong><ul><li>Precall the key idea: Find the relationship between transformed points ($x^,,y^,,z^,$) and the original points ($x,y,z$)</li></ul></li></ul><p><img src="/image-20230819182909928.png"></p><p><img src="/image-20230819182953853.png"></p><p><img src="/image-20230819183018965.png"></p><p><img src="/image-20230819183056277.png"></p><p><img src="/image-20230819183126120.png"></p></details><p>结果：<br>$$<br>M_{frutum-&gt;cuboid} &#x3D;<br>\begin{bmatrix}<br>n&amp;0&amp;0&amp;0\<br>0&amp;n&amp;0&amp;0\<br>0&amp;0&amp;n+f&amp;-nf\<br>0&amp;0&amp;1&amp;0\<br>\end{bmatrix}<br>$$</p>]]></content:encoded>
       
       
       <category domain="http://example.com/categories/Learn/">Learn</category>
@@ -98,13 +98,13 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
-      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
-      
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
+      <category domain="http://example.com/tags/Learn/">Learn</category>
+      
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
+      
+      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
       
       
       <comments>http://example.com/2023/07/30/design-patterns/creational-pattern/#disqus_thread</comments>
@@ -129,9 +129,9 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/">Learn Design Patterns</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -191,9 +191,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/project-details/#disqus_thread</comments>
@@ -221,9 +221,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread</comments>
