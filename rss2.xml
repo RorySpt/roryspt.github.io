@@ -9,20 +9,16 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>不积跬步，无以至千里；不积小流，无以成江海</description>
-    <pubDate>Sat, 19 Aug 2023 11:04:27 GMT</pubDate>
+    <pubDate>Sat, 19 Aug 2023 11:07:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>some mathematics formula</title>
+      <title>一些数学公式</title>
       <link>http://example.com/2023/08/19/mathematics/%E4%B8%80%E4%BA%9B%E5%85%AC%E5%BC%8F/</link>
       <guid>http://example.com/2023/08/19/mathematics/%E4%B8%80%E4%BA%9B%E5%85%AC%E5%BC%8F/</guid>
       <pubDate>Sat, 19 Aug 2023 04:30:00 GMT</pubDate>
       
-        
-        
-      <description>&lt;h1 id=&quot;rodrigues-rotation-formula&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#rodrigues-rotation-formula&quot;&gt;&lt;/a&gt; Rodrigues’ Rotation Formula&lt;/h1&gt;
-&lt;p</description>
-        
+      <description>常用的数学公式</description>
       
       
       
@@ -89,9 +85,9 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
-      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -120,9 +116,9 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/">Learn Design Patterns</category>
       
       
-      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -183,9 +179,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/project-details/#disqus_thread</comments>
@@ -214,9 +210,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread</comments>
@@ -295,9 +291,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/06/27/learn-opengl/project-setting/#disqus_thread</comments>
