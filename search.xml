@@ -8,9 +8,29 @@
       <link href="/2023/08/20/learn-opengl/the-shading/"/>
       <url>/2023/08/20/learn-opengl/the-shading/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>Shading is local. <font color=Peru>No shadow</font> will be generated! (shading <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span> shadow)</p><h1 id="diffuse-reflection"><a class="markdownIt-Anchor" href="#diffuse-reflection"></a> Diffuse Reflection</h1><ul><li>Light is scattered uniformly in all directions<ul><li>Surface color is the same for all view directions<br /><img src="the-shading/image-20230820171522115.png" alt="image-20230820171522115" style="zoom:50%;" /></li></ul></li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn OpenGL </category>
+          
+          <category> Shading </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
+            
+            <tag> Shading </tag>
+            
+        </tags>
       
     </entry>
     
