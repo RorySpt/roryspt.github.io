@@ -9,7 +9,7 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>不积跬步，无以至千里；不积小流，无以成江海</description>
-    <pubDate>Thu, 24 Aug 2023 07:56:47 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 15:51:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -119,13 +119,13 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
-      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
-      
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
       <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
+      
+      <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
       
       
       <comments>http://example.com/2023/07/30/design-patterns/creational-pattern/#disqus_thread</comments>
