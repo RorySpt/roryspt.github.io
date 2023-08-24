@@ -35,9 +35,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/Shading/">Shading</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Shading/">Shading</category>
       
@@ -119,11 +119,11 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/Learn-Creational-Pattern/">Learn Creational Pattern</category>
       
       
+      <category domain="http://example.com/tags/Learn/">Learn</category>
+      
       <category domain="http://example.com/tags/Creational-Pattern/">Creational Pattern</category>
       
       <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
-      
-      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -150,9 +150,9 @@
       <category domain="http://example.com/categories/Learn/Learn-Design-Patterns/">Learn Design Patterns</category>
       
       
-      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
-      
       <category domain="http://example.com/tags/Learn/">Learn</category>
+      
+      <category domain="http://example.com/tags/Design-Patterns/">Design Patterns</category>
       
       <category domain="http://example.com/tags/Reading-Note/">Reading Note</category>
       
@@ -180,9 +180,9 @@
       <category domain="http://example.com/categories/Learn/Learn-c/">Learn c++</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/c/">c++</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/17/modern-cpp/modern-cpp-about-memfn-ptr/#disqus_thread</comments>
@@ -213,9 +213,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/project-details/#disqus_thread</comments>
@@ -244,9 +244,9 @@
       <category domain="http://example.com/categories/Learn/Learn-OpenGL/">Learn OpenGL</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/OpenGL/">OpenGL</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/04/learn-opengl/basic-knowledge/#disqus_thread</comments>
@@ -275,9 +275,9 @@
       <category domain="http://example.com/categories/Learn/Learn-c/">Learn c++</category>
       
       
-      <category domain="http://example.com/tags/Learn/">Learn</category>
-      
       <category domain="http://example.com/tags/c/">c++</category>
+      
+      <category domain="http://example.com/tags/Learn/">Learn</category>
       
       
       <comments>http://example.com/2023/07/03/modern-cpp/modern-cpp-usages/#disqus_thread</comments>
