@@ -8,7 +8,7 @@
       <link href="/2023/08/20/learn-opengl/the-shading/"/>
       <url>/2023/08/20/learn-opengl/the-shading/</url>
       
-        <content type="html"><![CDATA[<p>Shading is local. <font color=Peru>No shadow</font> will be generated! (shading <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span> shadow)</p><h1 id="diffuse-reflection"><a class="markdownIt-Anchor" href="#diffuse-reflection"></a> Diffuse Reflection</h1><ul><li><p>Light is scattered uniformly in all directions</p><ul><li>Surface color is the same for all view directions<details><summary>图片</summary> <img text-al style="margin-left: 0%; zoom: 50%;" src="/images/the-shading/image-20230820175637006.png" alt=""  /></details></li><li>But how much light (energy) is received?<ul><li>lambert’s cosine law<details><summary>图片</summary><img src="/images/the-shading/image-20230820211502470.png" alt="" style="margin-left: 0%;margin-bottom: 20px; zoom: 50%;" /></details></li></ul></li></ul></li><li><p>Shading independent of view direction</p><img src="/images/the-shading/image-20230820212524209.png" alt="diffuse reflection" style=" zoom: 50%;" /></li></ul><h1 id="specular-term-blinn-phong"><a class="markdownIt-Anchor" href="#specular-term-blinn-phong"></a> Specular Term (Blinn-Phong)</h1><p>Intensity depends on view direction</p><ul><li>Bright near mirror reflection direction<br /><img src="/images/the-shading/image-20230822141743340.png" alt="image-20230822141743340" style="zoom:50%;" /></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>Shading is local. <font color=Peru>No shadow</font> will be generated! (shading <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span> shadow)</p><h1 id="diffuse-reflection"><a class="markdownIt-Anchor" href="#diffuse-reflection"></a> Diffuse Reflection</h1><ul><li><p>Light is scattered uniformly in all directions</p><ul><li>Surface color is the same for all view directions<details><summary>图片</summary> <img text-al style="margin-left: 0%; zoom: 50%;" src="/images/the-shading/image-20230820175637006.png" alt=""  /></details></li><li>But how much light (energy) is received?<ul><li>lambert’s cosine law<details><summary>图片</summary><img src="/images/the-shading/image-20230820211502470.png" alt="" style="margin-left: 0%;margin-bottom: 20px; zoom: 50%;" /></details></li></ul></li></ul></li><li><p>Shading independent of view direction</p><img src="/images/the-shading/image-20230820212524209.png" alt="" style=" zoom: 50%;" /></li></ul><h1 id="specular-term-blinn-phong"><a class="markdownIt-Anchor" href="#specular-term-blinn-phong"></a> Specular Term (Blinn-Phong)</h1><p>Intensity depends on view direction</p><ul><li>Bright near mirror reflection direction<br /><img src="/images/the-shading/image-20230822141743340.png" alt="" style="zoom:50%;" /></li></ul><h1 id="ambient-term"><a class="markdownIt-Anchor" href="#ambient-term"></a> Ambient Term</h1><p>Shading that does not depend on anything</p><ul><li>Add constant color to account for disregarded illumination and fill in black shadows</li><li>This is approximate / fake!<br /><img src="/images/the-shading/image-20230824151710347.png" alt="" style="zoom:50%;" /></li></ul><h1 id="blinn-phong-reflection-model"><a class="markdownIt-Anchor" href="#blinn-phong-reflection-model"></a> Blinn-Phong Reflection Model</h1><img src="/images/the-shading/image-20230824152006727.png" alt="" style="zoom:80%;" /><h1 id="graphics-pipeline"><a class="markdownIt-Anchor" href="#graphics-pipeline"></a> Graphics Pipeline</h1><img src="/images/the-shading/image-20230824153702767.png" alt="" style="zoom: 50%;" /><h1 id="shadertoy-beta"><a class="markdownIt-Anchor" href="#shadertoy-beta"></a> <a href="https://www.shadertoy.com/">Shadertoy BETA</a></h1>]]></content>
       
       
       <categories>
@@ -24,9 +24,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
             <tag> Shading </tag>
             
@@ -101,11 +101,11 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> Creational Pattern </tag>
             
             <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
             
             <tag> Reading Note </tag>
             
@@ -134,9 +134,9 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
             
             <tag> Reading Note </tag>
             
@@ -165,9 +165,9 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> c++ </tag>
             
         </tags>
       
@@ -194,9 +194,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -223,9 +223,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -252,9 +252,9 @@
       
         <tags>
             
-            <tag> c++ </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> c++ </tag>
             
         </tags>
       
@@ -306,9 +306,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
