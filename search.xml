@@ -4,6 +4,78 @@
   
     
     <entry>
+      <title>编码转换</title>
+      <link href="/2023/08/26/cpptools/code-trans/"/>
+      <url>/2023/08/26/cpptools/code-trans/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;format&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Windows.h&gt;</span> <span class="comment">// just for windows platform</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">std::string <span class="title">WideCharToAnsi</span><span class="params">(<span class="type">const</span> <span class="type">wchar_t</span>* ws)</span></span>;</span><br><span class="line"><span class="function">std::wstring <span class="title">AnsiToWideChar</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* s)</span></span>;</span><br><span class="line"><span class="function">std::u8string <span class="title">WideCharToUtf8</span><span class="params">(<span class="type">const</span> <span class="type">wchar_t</span>* ws)</span></span>;</span><br><span class="line"><span class="function">std::wstring <span class="title">Utf8ToWideChar</span><span class="params">(<span class="type">const</span> <span class="type">char8_t</span>* u8s)</span></span>;</span><br><span class="line"><span class="function">std::u8string <span class="title">AnsiToUtf8</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* s)</span></span>;</span><br><span class="line"><span class="function">std::string <span class="title">Utf8ToAnsi</span><span class="params">(<span class="type">const</span> <span class="type">char8_t</span>* u8s)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">code_trans_unit_testing</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Wait for cpp23... then #include&lt;print&gt; replaced</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span>... Types&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">println</span><span class="params">(<span class="type">const</span> std::string_view fmt, Types&amp;&amp;... args)</span> </span>&#123; std::cout &lt;&lt; std::<span class="built_in">vformat</span>(fmt, std::<span class="built_in">make_format_args</span>(args...)) &lt;&lt; <span class="string">&quot;\n&quot;</span>; &#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span>... Types&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(<span class="type">const</span> std::string_view fmt, Types&amp;&amp;... args)</span> </span>&#123; std::cout &lt;&lt; std::<span class="built_in">vformat</span>(fmt, std::<span class="built_in">make_format_args</span>(args...)); &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">std::string <span class="title">WideCharToAnsi</span><span class="params">(<span class="type">const</span> <span class="type">wchar_t</span>* ws)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> length = <span class="built_in">WideCharToMultiByte</span>(CP_ACP, <span class="number">0</span>, ws, <span class="number">-1</span>, <span class="literal">nullptr</span>, <span class="number">0</span>, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>);</span><br><span class="line"><span class="keyword">if</span> (length == <span class="number">0</span>) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">std::string s; s.<span class="built_in">resize</span>(length);</span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">WideCharToMultiByte</span>(CP_ACP, <span class="number">0</span>, ws, <span class="number">-1</span>, s.<span class="built_in">data</span>(), length, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>)) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::wstring <span class="title">AnsiToWideChar</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> length = <span class="built_in">MultiByteToWideChar</span>(CP_ACP, <span class="number">0</span>, s, <span class="number">-1</span>, <span class="literal">nullptr</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">if</span> (length == <span class="number">0</span>) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">std::wstring ws; ws.<span class="built_in">resize</span>(length);</span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">MultiByteToWideChar</span>(CP_ACP, <span class="number">0</span>, s, <span class="number">-1</span>, ws.<span class="built_in">data</span>(), length)) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ws;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::u8string <span class="title">WideCharToUtf8</span><span class="params">(<span class="type">const</span> <span class="type">wchar_t</span>* ws)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> length = <span class="built_in">WideCharToMultiByte</span>(CP_UTF8, <span class="number">0</span>, ws, <span class="number">-1</span>, <span class="literal">nullptr</span>, <span class="number">0</span>, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>);</span><br><span class="line"><span class="keyword">if</span> (length == <span class="number">0</span>) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">std::u8string u8s; u8s.<span class="built_in">resize</span>(length);</span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">WideCharToMultiByte</span>(CP_UTF8, <span class="number">0</span>, ws, <span class="number">-1</span>, <span class="built_in">reinterpret_cast</span>&lt;<span class="type">char</span>*&gt;(u8s.<span class="built_in">data</span>()), length, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>)) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> u8s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::wstring <span class="title">Utf8ToWideChar</span><span class="params">(<span class="type">const</span> <span class="type">char8_t</span>* u8s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> length = <span class="built_in">MultiByteToWideChar</span>(CP_UTF8, <span class="number">0</span>, <span class="built_in">reinterpret_cast</span>&lt;<span class="type">const</span> <span class="type">char</span>*&gt;(u8s), <span class="number">-1</span>, <span class="literal">nullptr</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">if</span> (length == <span class="number">0</span>) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">std::wstring ws; ws.<span class="built_in">resize</span>(length);</span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">MultiByteToWideChar</span>(CP_UTF8, <span class="number">0</span>, <span class="built_in">reinterpret_cast</span>&lt;<span class="type">const</span> <span class="type">char</span>*&gt;(u8s), <span class="number">-1</span>, ws.<span class="built_in">data</span>(), length)) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Conversion failed. Error code: %lu\n&quot;</span>, <span class="built_in">GetLastError</span>());</span><br><span class="line"><span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ws;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::u8string <span class="title">AnsiToUtf8</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">WideCharToUtf8</span>(<span class="built_in">AnsiToWideChar</span>(s).<span class="built_in">c_str</span>());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">std::string <span class="title">Utf8ToAnsi</span><span class="params">(<span class="type">const</span> <span class="type">char8_t</span>* u8s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">WideCharToAnsi</span>(<span class="built_in">Utf8ToWideChar</span>(u8s).<span class="built_in">c_str</span>());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">code_trans_unit_testing</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;common unit test begin!&quot;</span>);</span><br><span class="line"><span class="type">const</span> std::wstring input_w = <span class="string">L&quot;成功！&quot;</span>;</span><br><span class="line"><span class="type">const</span> std::u8string input_u8 = <span class="built_in">WideCharToUtf8</span>(input_w.<span class="built_in">c_str</span>());</span><br><span class="line"><span class="type">const</span> std::string input = <span class="built_in">WideCharToAnsi</span>(input_w.<span class="built_in">c_str</span>());</span><br><span class="line"></span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;Ansi&lt;-&gt;WideChar: &#123;&#125;&quot;</span>, <span class="built_in">WideCharToAnsi</span>(<span class="built_in">AnsiToWideChar</span>(input.<span class="built_in">c_str</span>()).<span class="built_in">c_str</span>()));</span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;Utf8&lt;-&gt;WideChar: &#123;&#125;&quot;</span>, <span class="built_in">WideCharToAnsi</span>(<span class="built_in">Utf8ToWideChar</span>(input_u8.<span class="built_in">c_str</span>()).<span class="built_in">c_str</span>()));</span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;Utf8&lt;-&gt;Ansi: &#123;&#125;&quot;</span>, <span class="built_in">Utf8ToAnsi</span>(<span class="built_in">AnsiToUtf8</span>(input.<span class="built_in">c_str</span>()).<span class="built_in">c_str</span>()));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+          <category> tools </category>
+          
+          <category> code-trans </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Tools </tag>
+            
+            <tag> CodeTrans </tag>
+            
+            <tag> Unicode </tag>
+            
+            <tag> Ansi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>结构型设计模式</title>
+      <link href="/2023/08/25/design-patterns/structural-pattern/"/>
+      <url>/2023/08/25/design-patterns/structural-pattern/</url>
+      
+        <content type="html"><![CDATA[<p>结构型设计模式主要关注如何设置应用程序的结构，以使代码满足SOLID设计原则，提高代码的通用性和可重构性。</p><p>当谈到对象的结构时，我们可以使用下面几种常用的方式：</p><ul><li><strong>继承</strong>：对象可以直接获得基类的非私有成员和方法。为实例化对象，派生类必须提供每个继承而来的虚函数的实现，否则该派生类是抽象的，不能被实例化（但可以继承该派生类）</li><li><strong>组合</strong>：组合是一种部分与整体的关系，部分不可以离开整体而单独存在。例如，如果某个对象有一个类型为<code>owner&lt;T&gt;</code>的成员，当该对象被销毁时，其成员也随之被销毁</li><li><strong>聚合</strong>：聚合是一种部分与整体的关系，部分和整体可以单独存在。例如，一个对象可以含有类型为<code>T*</code>或者<code>shared_ptr&lt;T&gt;</code>的成员。</li></ul><p>我们把组合和聚合看作同一种类型的方法。例如，Person类含有一个类型为Address的成员，我们既可以将Address作为外部定义的类，也可以将其定义为Person的内部类。换言之，假设将Person中的Address类对象声明为公共成员，在上述两种方式下，我们可以分别使用Address和Person::Address的方法将其实例化。</p><p>想表达“聚合”的意思但却使用“组合”这个词的现象很普遍，以至于我们可以互换地使用它们。例如，当我们谈论IoC容器时，我们使用的是“组合”。但是，IoC容器不是单独控制每个对象的生命周期吗？的确如此，虽然这里使用“组合”这个词，其实是指“聚合”。</p><h1 id="适配器模式"><a class="markdownIt-Anchor" href="#适配器模式"></a> 适配器模式</h1><p>根据已有的接口得到另一个不同的接口，在接口上构建一个适配器。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn Design Patterns </category>
+          
+          <category> Learn Structural Pattern </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
+            
+            <tag> Reading Note </tag>
+            
+            <tag> Structural Pattern </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>the shading</title>
       <link href="/2023/08/20/learn-opengl/the-shading/"/>
       <url>/2023/08/20/learn-opengl/the-shading/</url>
@@ -24,9 +96,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
             <tag> Shading </tag>
             
@@ -101,11 +173,11 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> Creational Pattern </tag>
             
             <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
             
             <tag> Reading Note </tag>
             
@@ -134,9 +206,9 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> Design Patterns </tag>
+            
+            <tag> Learn </tag>
             
             <tag> Reading Note </tag>
             
@@ -194,9 +266,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -223,9 +295,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -306,9 +378,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
