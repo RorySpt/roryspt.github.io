@@ -30,7 +30,7 @@
 <meta property="og:description" content="时间日期（chrono）  打印当前时间 12345const std::chrono::zoned_time cur_time&amp;#123; std::chrono::current_zone(),	std::chrono::system_clock::now() &amp;#125;;std::cout &lt;&lt; std::format(&quot;&amp;#123;:L%F %H:%M:%OS">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-03T08:15:33.000Z">
-<meta property="article:modified_time" content="2023-07-03T08:29:25.704Z">
+<meta property="article:modified_time" content="2023-09-14T23:08:38.772Z">
 <meta property="article:author" content="RorySpt">
 <meta property="article:tag" content="Learn">
 <meta property="article:tag" content="c++">
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9Fchrono"><span class="nav-number">1.</span> <span class="nav-text"> 时间日期（chrono）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text"> 打印当前时间</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9Fchrono"><span class="nav-number">1.</span> <span class="nav-text"> 时间日期（chrono）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4"><span class="nav-number">1.1.</span> <span class="nav-text"> 打印当前时间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5concept"><span class="nav-number">2.</span> <span class="nav-text"> 概念（concept）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B0%E7%BA%A6%E6%9D%9F%E4%B8%BA%E6%9F%90%E4%B8%AA%E6%A8%A1%E6%9D%BF%E7%9A%84%E7%89%B9%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text"> 将模板参数约束为某个模板的特化</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,9 +268,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-07-03 16:15:33 / 修改时间：16:29:25" itemprop="dateCreated datePublished" datetime="2023-07-03T16:15:33+08:00">2023-07-03</time>
+      <time title="创建时间：2023-07-03 16:15:33" itemprop="dateCreated datePublished" datetime="2023-07-03T16:15:33+08:00">2023-07-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-15 07:08:38" itemprop="dateModified" datetime="2023-09-15T07:08:38+08:00">2023-09-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -328,7 +334,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>67</span>
+      <span>131</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -361,6 +367,9 @@
 <p><a target="_blank" rel="noopener" href="https://zh.cppreference.com/w/cpp/chrono/current_zone">cppreference/cpp/chrono/current_zone</a></p>
 </li>
 </ul>
+<h1 id="概念concept"><a class="markdownIt-Anchor" href="#概念concept"></a> 概念（concept）</h1>
+<h2 id="将模板参数约束为某个模板的特化"><a class="markdownIt-Anchor" href="#将模板参数约束为某个模板的特化"></a> 将模板参数约束为某个模板的特化</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> isVector&#123; <span class="literal">false</span> &#125;;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> isVector&lt;std::vector &lt;T&gt;&gt;&#123;<span class="literal">true</span>&#125;;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">concept</span> IsVector = isVector&lt;std::<span class="type">remove_cvref_t</span>&lt;T&gt;&gt;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">foo</span><span class="params">(IsVector <span class="keyword">auto</span> &amp;&amp; val)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="keyword">auto</span> vec = std::<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;();</span><br><span class="line">    <span class="built_in">foo</span>(vec); <span class="comment">// √</span></span><br><span class="line">    <span class="comment">// foo(123); ×</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -436,14 +445,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">10k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">38 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
