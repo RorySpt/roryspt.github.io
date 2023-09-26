@@ -22,38 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="OpenGL 的着色器相关">
+    <meta name="description" content="GLSL 概述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="the shading">
-<meta property="og:url" content="http://example.com/2023/08/20/learn-opengl/the-shading/index.html">
+<meta property="og:title" content="Light and Shadow">
+<meta property="og:url" content="http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/index.html">
 <meta property="og:site_name" content="RorySpt 个人资料站">
-<meta property="og:description" content="OpenGL 的着色器相关">
+<meta property="og:description" content="GLSL 概述">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230820175637006.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230820211502470.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230820212524209.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230822141743340.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230824151710347.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230824152006727.png">
-<meta property="og:image" content="http://example.com/images/the-shading/image-20230824153702767.png">
-<meta property="article:published_time" content="2023-08-20T08:54:21.000Z">
-<meta property="article:modified_time" content="2023-09-25T01:59:34.635Z">
+<meta property="article:published_time" content="2023-09-25T02:05:50.000Z">
+<meta property="article:modified_time" content="2023-09-26T02:08:01.842Z">
 <meta property="article:author" content="RorySpt">
 <meta property="article:tag" content="Learn">
 <meta property="article:tag" content="OpenGL">
 <meta property="article:tag" content="Shading">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/the-shading/image-20230820175637006.png">
 
 
-<link rel="canonical" href="http://example.com/2023/08/20/learn-opengl/the-shading/">
+<link rel="canonical" href="http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/08/20/learn-opengl/the-shading/","path":"2023/08/20/learn-opengl/the-shading/","title":"the shading"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/","path":"2023/09/25/learn-opengl/shader/glsl-overview/","title":"Light and Shadow"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>the shading | RorySpt 个人资料站</title>
+<title>Light and Shadow | RorySpt 个人资料站</title>
   
 
 
@@ -153,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#diffuse-reflection"><span class="nav-number">1.</span> <span class="nav-text"> Diffuse Reflection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#specular-term-blinn-phong"><span class="nav-number">2.</span> <span class="nav-text"> Specular Term (Blinn-Phong)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ambient-term"><span class="nav-number">3.</span> <span class="nav-text"> Ambient Term</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#blinn-phong-reflection-model"><span class="nav-number">4.</span> <span class="nav-text"> Blinn-Phong Reflection Model</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#graphics-pipeline"><span class="nav-number">5.</span> <span class="nav-text"> Graphics Pipeline</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shadertoy-beta"><span class="nav-number">6.</span> <span class="nav-text"> Shadertoy BETA</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text"> 变量的声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text"> 聚合类型</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -216,6 +208,23 @@
         </ul>
       </div>
     </div>
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/08/20/learn-opengl/shader/the-shading/" rel="bookmark">
+        <time class="popular-posts-time">2023-08-20</time>
+        <br>
+      the shading
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
   </aside>
 
 
@@ -232,7 +241,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/20/learn-opengl/the-shading/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://s2.loli.net/2023/06/24/f3Z9uOABbP8TmqN.gif">
@@ -245,12 +254,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="the shading | RorySpt 个人资料站">
-      <meta itemprop="description" content="OpenGL 的着色器相关">
+      <meta itemprop="name" content="Light and Shadow | RorySpt 个人资料站">
+      <meta itemprop="description" content="GLSL 概述">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          the shading
+          Light and Shadow
         </h1>
 
         <div class="post-meta-container">
@@ -261,14 +270,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-08-20 16:54:21" itemprop="dateCreated datePublished" datetime="2023-08-20T16:54:21+08:00">2023-08-20</time>
+      <time title="创建时间：2023-09-25 10:05:50" itemprop="dateCreated datePublished" datetime="2023-09-25T10:05:50+08:00">2023-09-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-25 09:59:34" itemprop="dateModified" datetime="2023-09-25T09:59:34+08:00">2023-09-25</time>
+      <time title="修改时间：2023-09-26 10:08:01" itemprop="dateModified" datetime="2023-09-26T10:08:01+08:00">2023-09-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,10 +311,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Disqus：</span>
+      <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="disqus" href="/2023/08/20/learn-opengl/the-shading/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/08/20/learn-opengl/the-shading/" itemprop="commentCount"></span>
+    <a title="Light and Shadow" href="/2023/09/25/learn-opengl/shader/glsl-overview/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::d3505ceb3f817cf1a0355f634832955e" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -316,10 +325,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Changyan：</span>
+      <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="the shading" href="/2023/08/20/learn-opengl/the-shading/#SOHUCS" itemprop="discussionUrl">
-      <span id="sourceId::13add343741cef09a25481db4791c890" class="cy_cmt_count" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/09/25/learn-opengl/shader/glsl-overview/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/25/learn-opengl/shader/glsl-overview/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -330,7 +339,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>534</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -341,52 +350,139 @@
     </span>
 </div>
 
-            <div class="post-description">OpenGL 的着色器相关</div>
+            <div class="post-description">GLSL 概述</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Shading is local. <font color=Peru>No shadow</font> will be generated! (shading <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span> shadow)</p>
-<h1 id="diffuse-reflection"><a class="markdownIt-Anchor" href="#diffuse-reflection"></a> Diffuse Reflection</h1>
-<ul>
-<li>
-<p>Light is scattered uniformly in all directions</p>
-<ul>
-<li>Surface color is the same for all view directions<details><summary>图片</summary> <img text-al style="margin-left: 0%; zoom: 50%;" src="/images/the-shading/image-20230820175637006.png" alt=""  /></details>
-</li>
-<li>But how much light (energy) is received?
-<ul>
-<li>lambert’s cosine law<details><summary>图片</summary><img src="/images/the-shading/image-20230820211502470.png" alt="" style="margin-left: 0%;margin-bottom: 20px; zoom: 50%;" /></details>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Shading independent of view direction</p>
-<img src="/images/the-shading/image-20230820212524209.png" alt="" style=" zoom: 50%;" />
-</li>
-</ul>
-<h1 id="specular-term-blinn-phong"><a class="markdownIt-Anchor" href="#specular-term-blinn-phong"></a> Specular Term (Blinn-Phong)</h1>
-<p>Intensity depends on view direction</p>
-<ul>
-<li>Bright near mirror reflection direction<br />
-<img src="/images/the-shading/image-20230822141743340.png" alt="" style="zoom:50%;" /></li>
-</ul>
-<h1 id="ambient-term"><a class="markdownIt-Anchor" href="#ambient-term"></a> Ambient Term</h1>
-<p>Shading that does not depend on anything</p>
-<ul>
-<li>Add constant color to account for disregarded illumination and fill in black shadows</li>
-<li>This is approximate / fake!<br />
-<img src="/images/the-shading/image-20230824151710347.png" alt="" style="zoom:50%;" /></li>
-</ul>
-<h1 id="blinn-phong-reflection-model"><a class="markdownIt-Anchor" href="#blinn-phong-reflection-model"></a> Blinn-Phong Reflection Model</h1>
-<img src="/images/the-shading/image-20230824152006727.png" alt="" style="zoom:80%;" />
-<h1 id="graphics-pipeline"><a class="markdownIt-Anchor" href="#graphics-pipeline"></a> Graphics Pipeline</h1>
-<img src="/images/the-shading/image-20230824153702767.png" alt="" style="zoom: 50%;" />
-<h1 id="shadertoy-beta"><a class="markdownIt-Anchor" href="#shadertoy-beta"></a> <a target="_blank" rel="noopener" href="https://www.shadertoy.com/">Shadertoy BETA</a></h1>
+    <div class="post-body" itemprop="articleBody"><p>4.5版本的图形渲染管线有4个处理阶段，还有一个通用计算阶段，每个阶段都需要由一个专门的着色器进行控制。</p>
+<ol>
+<li>顶点着色阶段（vertex shading stage）</li>
+<li>细分着色阶段（tessellation shading stage）</li>
+<li>几何着色阶段（geometry shading stage）</li>
+<li>片元着色阶段（fragment shading stage）</li>
+<li>计算着色阶段（compute shading stage）</li>
+</ol>
+<p>一个重要的概念就是着色器阶段之间数据传输方式。着色器类似一个函数调用的方式——数据传输进来，经过处理，然后再传输出去。在C语言中，这一过程可以通过全局变量，或者函数参数来完成。GLSL与之稍有差异。每个着色器看起来都像是一个完整的C程序，它的输入点就是一个名为main()的函数。但与C不同的是，GLSL的main()函数没有任何参数，在某个着色器阶段中输入和输出的所有数据都是通过着色器中特殊全局变量来传递的。</p>
+<h1 id="变量的声明"><a class="markdownIt-Anchor" href="#变量的声明"></a> 变量的声明</h1>
+<p>GLSL是一种强类型语言，所有变量都必须事先声明，并且要给出变量的类型。</p>
+<p>GLSL中的基本数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>IEEE32位浮点数</td>
+</tr>
+<tr>
+<td>double</td>
+<td>IEEE64位浮点数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>有符号二进制补码的32位整数</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>无符号的32位整数</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>布尔值</td>
+</tr>
+</tbody>
+</table>
+<p>这些类型（以及它们的聚合类型）都是透明的。也就是说，它们内部形式都是暴露出来的，因此着色器代码中可以假设其内部的构成方式。</p>
+<p>与之对应的一部分类型，称作不透明类型，它们内部形式没有透露出来，这些类型包括（sampler）、图像（image），以及原子计数器（atomic counter）。它们所声明的变量相当于一个不透明的句柄，可以用来读取纹理贴图、图像，以及原子计数器数据。</p>
+<h1 id="聚合类型"><a class="markdownIt-Anchor" href="#聚合类型"></a> 聚合类型</h1>
+<p>GLSL的基本类型可以进行合并，从而与核心OpenGL的数据类型相匹配，以及简化计算过程的操作。</p>
+<p>首先，GLSL支持2个、3个以及4个分量的向量，每个分量都可以使用bool、int、uint、float 和 double 这些基本类型。此外，GLSL也支持float和double类型的矩阵。</p>
+<p>GLSL的向量与矩阵类型：</p>
+<table  style="text-align:center;">
+	<tr>
+	    <th align="center">基本类型</th>
+	    <th>2D向量</th>
+	    <th>3D向量</th>  
+        <th>4D向量</th>  
+        <th colspan="3">矩阵类型</th>  
+	</tr >
+	<tr >
+	    <td rowspan="4">float</td>
+	    <td rowspan="4">vec2</td>
+	    <td rowspan="4">vec3</td>
+        <td rowspan="4">vec4</td>
+        <td>mat2</td>
+        <td>mat3</td>
+        <td>mat4</td>
+	</tr>
+	<tr>
+	    <td>mat2x2</td>
+        <td>mat2x3</td>
+        <td>mat2x4</td>
+	</tr>
+	<tr>
+	    <td>mat3x2</td>
+        <td>mat3x3</td>
+        <td>mat3x4</td>
+	</tr>
+    <tr>
+	    <td>mat4x2</td>
+        <td>mat4x3</td>
+        <td>mat4x4</td>
+	</tr>
+    <tr >
+	    <td rowspan="4">double</td>
+	    <td rowspan="4">dvec2</td>
+	    <td rowspan="4">dvec3</td>
+        <td rowspan="4">dvec4</td>
+        <td>dmat2</td>
+        <td>dmat3</td>
+        <td>dmat4</td>
+	</tr>
+	<tr>
+	    <td>dmat2x2</td>
+        <td>dmat2x3</td>
+        <td>dmat2x4</td>
+	</tr>
+	<tr>
+	    <td>dmat3x2</td>
+        <td>dmat3x3</td>
+        <td>dmat3x4</td>
+	</tr>
+    <tr>
+	    <td>dmat4x2</td>
+        <td>dmat4x3</td>
+        <td>dmat4x4</td>
+	</tr>
+	 <tr >
+	    <td>int</td>
+	    <td>ivec2</td>
+	    <td>ivec3</td>
+        <td>ivec4</td>
+        <td colspan="3">——</td>
+	</tr>
+    <tr >
+	    <td>uint</td>
+	    <td>uvec2</td>
+	    <td>uvec3</td>
+        <td>uvec4</td>
+        <td colspan="3">——</td>
+	</tr>
+     <tr >
+	    <td>bool</td>
+	    <td>bvec2</td>
+	    <td>bvec3</td>
+        <td>bvec4</td>
+         <td colspan="3">——</td>
+	</tr>
+</table>
 
     </div>
 
@@ -405,14 +501,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/08/19/mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/" rel="prev" title="线性代数中的线性方程组">
-                  <i class="fa fa-chevron-left"></i> 线性代数中的线性方程组
+                <a href="/2023/09/25/learn-opengl/shader/light-and-shadow/" rel="prev" title="Light and Shadow">
+                  <i class="fa fa-chevron-left"></i> Light and Shadow
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/08/25/design-patterns/structural-pattern/" rel="next" title="结构型设计模式">
-                  结构型设计模式 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -426,19 +519,19 @@
 
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-disqus">disqus</a></li>
             <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
         </ul>
         <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="d3505ceb3f817cf1a0355f634832955e"></div>
+            </div>
             <div class="tab-pane disqus" id="comment-disqus">
               
   <div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </div>
   
-            </div>
-            <div class="tab-pane changyan" id="comment-changyan">
-              <div class="comments" id="SOHUCS" sid="13add343741cef09a25481db4791c890"></div>
             </div>
         </div>
       </div>
@@ -463,14 +556,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">28k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">25 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -537,10 +630,10 @@
   <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" integrity="sha256-hLTCMFlKxdNgPXyWlSSxYN0ykJmxxq9Yt3MNfdRGWeA=" crossorigin="anonymous">
 
 
-<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"ge-ren-zi-liao-zhan","count":true,"i18n":{"disqus":"disqus"}}</script>
-<script src="/js/third-party/comments/disqus.js"></script>
 <script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cywK8ub0s","appkey":"9dc2e7c79fbcf50f0ea531e90b9122e0","count":true}</script>
 <script src="/js/third-party/comments/changyan.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"ge-ren-zi-liao-zhan","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
 
 </body>
 </html>

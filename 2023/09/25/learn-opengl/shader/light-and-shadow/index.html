@@ -22,25 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"changyan","storage":true,"lazyload":true,"nav":null,"activeClass":"changyan"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="不积跬步，无以至千里；不积小流，无以成江海">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RorySpt 个人资料站">
-<meta property="og:url" content="http://example.com/categories/Learn/Learn-OpenGL/index.html">
+    <meta name="description" content="GLSL 光照和阴影">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Light and Shadow">
+<meta property="og:url" content="http://example.com/2023/09/25/learn-opengl/shader/light-and-shadow/index.html">
 <meta property="og:site_name" content="RorySpt 个人资料站">
-<meta property="og:description" content="不积跬步，无以至千里；不积小流，无以成江海">
+<meta property="og:description" content="GLSL 光照和阴影">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-25T02:05:50.000Z">
+<meta property="article:modified_time" content="2023-09-26T01:11:29.229Z">
 <meta property="article:author" content="RorySpt">
+<meta property="article:tag" content="Learn">
+<meta property="article:tag" content="OpenGL">
+<meta property="article:tag" content="Shading">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/categories/Learn/Learn-OpenGL/">
+<link rel="canonical" href="http://example.com/2023/09/25/learn-opengl/shader/light-and-shadow/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/Learn/Learn-OpenGL/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/09/25/learn-opengl/shader/light-and-shadow/","path":"2023/09/25/learn-opengl/shader/light-and-shadow/","title":"Light and Shadow"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: Learn OpenGL | RorySpt 个人资料站</title>
+<title>Light and Shadow | RorySpt 个人资料站</title>
   
 
 
@@ -127,7 +132,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -140,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%85%A7"><span class="nav-number">1.</span> <span class="nav-text"> 光照</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%85%89%E7%85%A7%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text"> 经典光照模型</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,151 +213,195 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Learn OpenGL
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/learn-opengl/shader/light-and-shadow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://s2.loli.net/2023/06/24/f3Z9uOABbP8TmqN.gif">
+      <meta itemprop="name" content="RorySpt">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RorySpt 个人资料站">
+      <meta itemprop="description" content="不积跬步，无以至千里；不积小流，无以成江海">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Light and Shadow | RorySpt 个人资料站">
+      <meta itemprop="description" content="GLSL 光照和阴影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Light and Shadow
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
-    </div>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-09-25T10:05:50+08:00"
-              content="2023-09-25">
-          09-25
-        </time>
-      </div>
+      <time title="创建时间：2023-09-25 10:05:50" itemprop="dateCreated datePublished" datetime="2023-09-25T10:05:50+08:00">2023-09-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-26 09:11:29" itemprop="dateModified" datetime="2023-09-26T09:11:29+08:00">2023-09-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learn/" itemprop="url" rel="index"><span itemprop="name">Learn</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learn/Learn-OpenGL/" itemprop="url" rel="index"><span itemprop="name">Learn OpenGL</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Learn/Learn-OpenGL/Shading/" itemprop="url" rel="index"><span itemprop="name">Shading</span></a>
+        </span>
+    </span>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/25/learn-opengl/shader/glsl-overview/" itemprop="url">
-            <span itemprop="name">Light and Shadow</span>
-          </a>
-      </div>
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    <a title="Light and Shadow" href="/2023/09/25/learn-opengl/shader/light-and-shadow/#SOHUCS" itemprop="discussionUrl">
+      <span id="sourceId::3501e229279688397f4073b7faedce8c" class="cy_cmt_count" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2023/09/25/learn-opengl/shader/light-and-shadow/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/09/25/learn-opengl/shader/light-and-shadow/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>664</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
 
-      
-    </header>
-  </article>
+            <div class="post-description">GLSL 光照和阴影</div>
+        </div>
+      </header>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-09-25T10:05:50+08:00"
-              content="2023-09-25">
-          09-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/25/learn-opengl/shader/light-and-shadow/" itemprop="url">
-            <span itemprop="name">Light and Shadow</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-08-20T16:54:21+08:00"
-              content="2023-08-20">
-          08-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/08/20/learn-opengl/shader/the-shading/" itemprop="url">
-            <span itemprop="name">the shading</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-07-04T20:47:04+08:00"
-              content="2023-07-04">
-          07-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/07/04/learn-opengl/project-details/" itemprop="url">
-            <span itemprop="name">[Learn OpenGL] 项目详情</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-07-04T19:39:39+08:00"
-              content="2023-07-04">
-          07-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/07/04/learn-opengl/basic-knowledge/" itemprop="url">
-            <span itemprop="name">[Learn OpenGL] 基础知识</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-06-27T19:13:02+08:00"
-              content="2023-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/06/27/learn-opengl/project-setting/" itemprop="url">
-            <span itemprop="name">[Learn OpenGL] 项目配置</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="光照"><a class="markdownIt-Anchor" href="#光照"></a> 光照</h1>
+<p>OpenGL 着色器程序几乎允许在场景实现光源的无限可能性。</p>
+<h1 id="经典光照模型"><a class="markdownIt-Anchor" href="#经典光照模型"></a> 经典光照模型</h1>
+<p>经典光照模型通过单独计算光源成分得到综合光照效果，然后添加到材质表面特定点。这些成分包括环境光，漫反射和镜面光。</p>
+<p>环境光是不来自任何特定的方向的光。在整个场景中经典光照模型把它当成一个常量，组成一个合适的第一近似值来缩放场景中的光照成分。计算这个光照并不涉及任何关于光源方向或者眼睛观察场景的方向。它也可以当成积累每个光源的基础贡献值或者当成预先计算的单一全局效果。</p>
+<p>漫反射光是散射在各个方向上均匀的表面特定的光源。漫反射光通过光照照亮才能看到表面，即使这个表面没有直接将光源反射到你的眼睛。它跟眼睛方向没有关系，但是跟光源方向有关系。当表面直接面向光源时，那么看起来会亮一点，仅仅因外在这个方向上比在倾斜方向上可以收集更多的光。漫反射光依赖于表面法线方向和光源方向来计算，但没有包含视线方向。它同样依赖于表面的颜色。</p>
+<p>镜面光是由表面直接反射的高亮光。这个高亮就像镜子一样，跟表面材质多少有关。一个高度抛光的金属球能反射一个非常尖锐明亮的镜面高光，而一个磨砂的表面可以反射更大、更暗的镜面亮光，以及一个布球则一点都没有反射。这个特定角度效果的强度简称为光泽度（shininess）。计算镜面高光需要知道表面方向的近似度，也就是在光源和眼睛方向之间的直接反射大小，因此他需要知道表面法线、光源的方向和眼睛的方向。镜面高光可能结合或者不结合表面颜色。作为第一个近似值，它在不涉及任何表面颜色时会显得更真实。不管怎么说基础的颜色都会存在漫反射选项，给予它正确的色彩。</p>
 
     </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Learn/" rel="tag"># Learn</a>
+              <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
+              <a href="/tags/Shading/" rel="tag"># Shading</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/26/cpptools/code-trans/" rel="prev" title="编码转换">
+                  <i class="fa fa-chevron-left"></i> 编码转换
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/09/25/learn-opengl/shader/glsl-overview/" rel="next" title="Light and Shadow">
+                  Light and Shadow <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane changyan" id="comment-changyan">
+              <div class="comments" id="SOHUCS" sid="3501e229279688397f4073b7faedce8c"></div>
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </div>
   
-  
-  
-
+            </div>
+        </div>
+      </div>
 </div>
   </main>
 
