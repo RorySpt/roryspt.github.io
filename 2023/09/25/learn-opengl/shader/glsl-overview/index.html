@@ -24,13 +24,13 @@
 
     <meta name="description" content="GLSL 概述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Light and Shadow">
+<meta property="og:title" content="GLSL Overview">
 <meta property="og:url" content="http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/index.html">
 <meta property="og:site_name" content="RorySpt 个人资料站">
 <meta property="og:description" content="GLSL 概述">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-25T02:05:50.000Z">
-<meta property="article:modified_time" content="2023-09-26T02:08:01.842Z">
+<meta property="article:modified_time" content="2023-09-27T11:42:37.886Z">
 <meta property="article:author" content="RorySpt">
 <meta property="article:tag" content="Learn">
 <meta property="article:tag" content="OpenGL">
@@ -42,10 +42,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/","path":"2023/09/25/learn-opengl/shader/glsl-overview/","title":"Light and Shadow"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/09/25/learn-opengl/shader/glsl-overview/","path":"2023/09/25/learn-opengl/shader/glsl-overview/","title":"GLSL Overview"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Light and Shadow | RorySpt 个人资料站</title>
+<title>GLSL Overview | RorySpt 个人资料站</title>
   
 
 
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text"> 变量的声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text"> 聚合类型</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text"> 变量的声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text"> 聚合类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E5%90%91%E9%87%8F%E5%92%8C%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">3.</span> <span class="nav-text"> 访问向量和矩阵中的元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">4.</span> <span class="nav-text"> 结构体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">5.</span> <span class="nav-text"> 数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.</span> <span class="nav-text"> 存储限制符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#in-%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.1.</span> <span class="nav-text"> in 存储限制符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#out-%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.2.</span> <span class="nav-text"> out 存储限制符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uniform-%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.3.</span> <span class="nav-text"> uniform 存储限制符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#buffer-%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.4.</span> <span class="nav-text"> buffer 存储限制符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-%E5%AD%98%E5%82%A8%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">6.5.</span> <span class="nav-text"> shared 存储限制符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.</span> <span class="nav-text"> 语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">7.1.</span> <span class="nav-text"> 算数操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">7.2.</span> <span class="nav-text"> 操作符重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%8E%A7%E5%88%B6"><span class="nav-number">7.3.</span> <span class="nav-text"> 流控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.4.</span> <span class="nav-text"> 循环语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.5.</span> <span class="nav-text"> 流控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">7.6.</span> <span class="nav-text"> 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-number">7.7.</span> <span class="nav-text"> 声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">7.8.</span> <span class="nav-text"> 参数限制符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%9A%84%E4%B8%8D%E5%8F%98%E6%80%A7"><span class="nav-number">8.</span> <span class="nav-text"> 计算的不变性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#invariant-%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">8.1.</span> <span class="nav-text"> invariant 限制符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#precise-%E9%99%90%E5%88%B6%E7%AC%A6"><span class="nav-number">8.2.</span> <span class="nav-text"> precise 限制符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9D%80%E8%89%B2%E5%99%A8%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text"> 着色器的预处理器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">9.1.</span> <span class="nav-text"> 预处理器命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">9.2.</span> <span class="nav-text"> 宏定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E6%8E%A7%E5%88%B6"><span class="nav-number">9.3.</span> <span class="nav-text"> 编译控制</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,23 +208,6 @@
         </ul>
       </div>
     </div>
-        <div class="sidebar-inner sidebar-post-related">
-          <div class="animated">
-              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
-    相关文章
-  </div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2023/08/20/learn-opengl/shader/the-shading/" rel="bookmark">
-        <time class="popular-posts-time">2023-08-20</time>
-        <br>
-      the shading
-      </a>
-    </li>
-  </ul>
-
-          </div>
-        </div>
   </aside>
 
 
@@ -254,12 +237,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Light and Shadow | RorySpt 个人资料站">
+      <meta itemprop="name" content="GLSL Overview | RorySpt 个人资料站">
       <meta itemprop="description" content="GLSL 概述">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Light and Shadow
+          GLSL Overview
         </h1>
 
         <div class="post-meta-container">
@@ -277,7 +260,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-26 10:08:01" itemprop="dateModified" datetime="2023-09-26T10:08:01+08:00">2023-09-26</time>
+      <time title="修改时间：2023-09-27 19:42:37" itemprop="dateModified" datetime="2023-09-27T19:42:37+08:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,7 +296,7 @@
       </span>
       <span class="post-meta-item-text">Changyan：</span>
     
-    <a title="Light and Shadow" href="/2023/09/25/learn-opengl/shader/glsl-overview/#SOHUCS" itemprop="discussionUrl">
+    <a title="GLSL Overview" href="/2023/09/25/learn-opengl/shader/glsl-overview/#SOHUCS" itemprop="discussionUrl">
       <span id="sourceId::d3505ceb3f817cf1a0355f634832955e" class="cy_cmt_count" itemprop="commentCount"></span>
     </a>
   </span>
@@ -339,14 +322,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>4.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>15 分钟</span>
     </span>
 </div>
 
@@ -483,6 +466,328 @@
          <td colspan="3">——</td>
 	</tr>
 </table>
+<h1 id="访问向量和矩阵中的元素"><a class="markdownIt-Anchor" href="#访问向量和矩阵中的元素"></a> 访问向量和矩阵中的元素</h1>
+<p>向量与矩阵中的元素是可以单独访问和设置的。向量支持两种类型的元素访问方式：使用分量的名称，或者数组访问的形式。矩阵可以以二维数组的形式访问。</p>
+<p>向量分量的访问符：</p>
+<table>
+<thead>
+<tr>
+<th>分量访问符</th>
+<th>符号描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（x，y，z，w）</td>
+<td>与位置相关的分量</td>
+</tr>
+<tr>
+<td>（r，g，b，a）</td>
+<td>与颜色相关的分量</td>
+</tr>
+<tr>
+<td>（s，t，p，q）</td>
+<td>与纹理坐标相关的分量</td>
+</tr>
+</tbody>
+</table>
+<h1 id="结构体"><a class="markdownIt-Anchor" href="#结构体"></a> 结构体</h1>
+<p>可以从逻辑上将不同类型的数据组合到一个结构体当中。结构体可以简化多组数据传入函数的过程。如果定义了一个结构体，那么他会自动创建一个新类型，并且隐式定义一个构造函数，将各种类型的结构体元素作为输入参数。</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Particle&#123;</span><br><span class="line">    <span class="type">float</span> lifetime;</span><br><span class="line">    <span class="type">vec3</span> position;</span><br><span class="line">    <span class="type">vec3</span> velocity;</span><br><span class="line">&#125;</span><br><span class="line">Particle p = Particle(<span class="number">10.0</span>, pos, vel); <span class="comment">// pos、vel 均为 vec3s 类型 </span></span><br></pre></td></tr></table></figure>
+<h1 id="数组"><a class="markdownIt-Anchor" href="#数组"></a> 数组</h1>
+<p>GLSL支持任意类型的数组，包括结构体数组。在GLSL4.3中，数组的组成元素也可以是另一个数组，因此可以处理多维度的数据。不过GLSL4.2和更早的版本不允许建立数组类型的数组（因此无法创建多维度的数组）。</p>
+<p>数组属于GLSL中第一等（first-class）类型，也就是说他有构造函数，并且可以用作函数的参数和返回类型。此外GLSL的数组与std::array类似，他有一个隐式方法可以返回元素的个数：即取长度的方法 length()。</p>
+<h1 id="存储限制符"><a class="markdownIt-Anchor" href="#存储限制符"></a> 存储限制符</h1>
+<p>数据类型也可以通过一些修饰符来改变自己的行为。GLSL中一共定义了几种全局范围的修饰符：</p>
+<table>
+<thead>
+<tr>
+<th>类型修饰符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>const</td>
+<td>将一个变量定义为只读形式。如果它初始化时用的是一个编译时常量，那么它本身也会成为编译时常量</td>
+</tr>
+<tr>
+<td>in</td>
+<td>设置这个变量位着色器阶段的输入变量</td>
+</tr>
+<tr>
+<td>out</td>
+<td>设置这个变量位着色器阶段的输出变量</td>
+</tr>
+<tr>
+<td>uniform</td>
+<td>设置这个变量为用户应用程序传递给着色器的数据，它对于给定的图元而言是一个常量</td>
+</tr>
+<tr>
+<td>buffer</td>
+<td>设置应用程序共享的一块可读写的内存。这块内存也作为着色器中存储缓存（storage buffer）使用</td>
+</tr>
+<tr>
+<td>shared</td>
+<td>设置变量是本地工作组（local work group）中共享的。它只能用于计算着色器中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="in-存储限制符"><a class="markdownIt-Anchor" href="#in-存储限制符"></a> in 存储限制符</h2>
+<p>in 修饰符用于定义着色器阶段的输入变量。这类输入变量可以是顶点属性（对于顶点着色器），或者前一个着色器阶段的输出变量。</p>
+<p>片元着色器也可以使用一些其他的关键词来限定自己的输入变量。</p>
+<h2 id="out-存储限制符"><a class="markdownIt-Anchor" href="#out-存储限制符"></a> out 存储限制符</h2>
+<p>out 修饰符用于定义一个着色器阶段的输出变量——例如，顶点着色器中输出变换后的齐次坐标，或者片元着色器中输出的最终片元颜色。</p>
+<h2 id="uniform-存储限制符"><a class="markdownIt-Anchor" href="#uniform-存储限制符"></a> uniform 存储限制符</h2>
+<p>在着色器运行之前，uniform 修饰符可以指定一个在应用程序中设置好的变量，它不会再图元处理的过程中发生变化。uniform 变量在所有可用的着色器阶段之间都是共享的，它必须定义为全局变量。任何类型的变量（包括结构体和数组）都可以设置为uniform变量。着色器无法写入到uniform变量，也无法改变它的值。</p>
+<h2 id="buffer-存储限制符"><a class="markdownIt-Anchor" href="#buffer-存储限制符"></a> buffer 存储限制符</h2>
+<p>如果需要在应用程序中共享一大块缓存给着色器，那么最好的方法是使用buffer变量。它与uniform变量非常类似，不过也可以用着色器对它的内容进行修改。通常来说，需要在一个buffer块中使用buffer变量。</p>
+<p>buffer修饰符指定随后的块作为着色器与应用程序共享的一块内存缓存。这块缓存对于着色器来说是可读的也是可写的。缓存的大小可以在着色器编译和程序连接完成后设置。</p>
+<h2 id="shared-存储限制符"><a class="markdownIt-Anchor" href="#shared-存储限制符"></a> shared 存储限制符</h2>
+<p>shared 修饰符只能用于计算着色器当中，它可以建立本地工作组内共享的内存。</p>
+<h1 id="语句"><a class="markdownIt-Anchor" href="#语句"></a> 语句</h1>
+<p>着色器的真正工作是计算数值以及完成一些决策工作。与C++中的形式类似，GLSL也提供了大量的操作符，来实现各种数值计算所需的算术操作，以及一系列控制着色器运行的逻辑操作。</p>
+<h2 id="算数操作符"><a class="markdownIt-Anchor" href="#算数操作符"></a> 算数操作符</h2>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>操作符</th>
+<th>可用类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>()</td>
+<td>——</td>
+<td>成组操作</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[]<br />f()<br />.（句号）<br />+±-</td>
+<td>数组、矩阵、向量<br />函数<br />结构体<br />算术类型</td>
+<td>数组的下标<br />函数调用与构造函数<br />访问结构体的域变量或者方法<br />后置递增/递减</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+±-<br />+ -<br />~<br />!</td>
+<td>算数类型<br />算数类型<br />整型<br />布尔型</td>
+<td>前置递增/递减<br />一元正/负数<br />一元按位“非”（not）<br />一元逻辑“非”（not）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>*/%</td>
+<td>算数类型</td>
+<td>乘法运算</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+ -</td>
+<td>算数类型</td>
+<td>加法运算</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&lt;&lt;&gt;&gt;</td>
+<td>整形</td>
+<td>按位运算</td>
+</tr>
+<tr>
+<td>7</td>
+<td>&lt;&gt; &lt;= &gt;=</td>
+<td>算数类型</td>
+<td>关系比较操作</td>
+</tr>
+<tr>
+<td>8</td>
+<td>== !=</td>
+<td>任意</td>
+<td>相等操作</td>
+</tr>
+<tr>
+<td>9</td>
+<td>&amp;</td>
+<td>整形</td>
+<td>按位“与”（and）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>^</td>
+<td>整形</td>
+<td>按位“异或”（xor）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>|</td>
+<td>整形</td>
+<td>按位“或”（or）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>&amp;&amp;</td>
+<td>布尔型</td>
+<td>逻辑“与”（and）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>^^</td>
+<td>布尔型</td>
+<td>逻辑“异或”（xor）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>||</td>
+<td>布尔型</td>
+<td>逻辑“或”（or）</td>
+</tr>
+<tr>
+<td>15</td>
+<td>a?b:c</td>
+<td>布尔?任意:任意</td>
+<td>三元选择操作符</td>
+</tr>
+<tr>
+<td>16</td>
+<td>=<br />+= -=<br />*= /=<br />%= &lt;&lt;= &gt;&gt;=<br />&amp;= ^= |=</td>
+<td></td>
+<td>赋值<br />算数赋值<br /><br /><br /></td>
+</tr>
+<tr>
+<td>17</td>
+<td>,（逗号）</td>
+<td>任意</td>
+<td>操作符序列</td>
+</tr>
+</tbody>
+</table>
+<h2 id="操作符重载"><a class="markdownIt-Anchor" href="#操作符重载"></a> 操作符重载</h2>
+<p>GLSL中的大部分操作符都是经过重载的，也就是说它们可以用于多种类型的数据操作。特别是，矩阵和向量的算数运算符（包括前置和后置的递增/递减符号“++”和“–”）在GLSL中都是经过严格定义的。</p>
+<h2 id="流控制"><a class="markdownIt-Anchor" href="#流控制"></a> 流控制</h2>
+<p>GLSL的逻辑控制方式用的也是流行的if-else和switch语句。</p>
+<h2 id="循环语句"><a class="markdownIt-Anchor" href="#循环语句"></a> 循环语句</h2>
+<p>GLSL支持C语言形式的for、while和do…while 循环。其中for循环可以在循环初始化条件中声明循环迭代变量。此时迭代变量的作用域只限于循环体内。</p>
+<h2 id="流控制语句"><a class="markdownIt-Anchor" href="#流控制语句"></a> 流控制语句</h2>
+<p>除了条件和循环之外，GLSL还支持一些别的控制语句。</p>
+<table>
+<thead>
+<tr>
+<th>语句</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>终止循环体的运行，并且继续执行循环体外的内容</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>终止循环体内当前迭代过程的执行，跳转到代码块开始部分并继续执行下一次迭代的内容</td>
+</tr>
+<tr>
+<td>return【结果】</td>
+<td>从当前子例程返回，可以带有一个函数返回值（返回值必须与函数声明的返回类型相符）</td>
+</tr>
+<tr>
+<td>discard</td>
+<td>丢弃当前的片元，终止着色器的执行。discard语句只在片元着色器中有效</td>
+</tr>
+</tbody>
+</table>
+<p>discard语句只适用于片元着色器中。片元着色器的运行会在discard语句的位置上立即终止，不过这也取决于具体的硬件实现。</p>
+<h2 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h2>
+<p>我们可以使用函数调用来取代可能反复执行的通用代码。这样当然可以减少代码的总量，并且减少发生错误的机会。GLSL支持用户自定义函数，同时也定义了一些内置函数。</p>
+<h2 id="声明"><a class="markdownIt-Anchor" href="#声明"></a> 声明</h2>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">returnType functionName([accessModifier] type1 varuable1, [accessModifier] type2 varuable2, ...)&#123;</span><br><span class="line">    <span class="keyword">return</span> returnValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参数限制符"><a class="markdownIt-Anchor" href="#参数限制符"></a> 参数限制符</h2>
+<p>尽管GLSL中的函数可以在运行后修改和返回数据，但是它与“C”或者C++不同，并没有指针或者引用的概念。不过与之对应，此时函数的参数可以指定一个参数限制符，来表明它是否需要在函数运行时将数据拷贝到函数中，或者从函数中返回修改的数据。</p>
+<table>
+<thead>
+<tr>
+<th>访问修饰符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>in</td>
+<td>将数据拷贝到函数中（如果没有指定修饰符，默认这种形式）</td>
+</tr>
+<tr>
+<td>const in</td>
+<td>将只读数据拷贝到函数中</td>
+</tr>
+<tr>
+<td>out</td>
+<td>从函数中获取数值（因此输入函数的值是未定义的）</td>
+</tr>
+<tr>
+<td>inout</td>
+<td>将数据拷贝到函数中，并且返回函数中修改的数据</td>
+</tr>
+</tbody>
+</table>
+<p>关键字in是可选的。如果一个变量没有包含任何访问修饰器，那么参数的声明会默认设置为使用in修饰符。但是，如果变量的值需要从函数中拷贝出来，那么我们就必须设置它为out（只能写出的变量）或者inout（可以读入也可以写出的变量）。如果我们写出到一个没有设置上述修饰符的变量上，那么会产生编译时错误。</p>
+<p>此外如果需要在编译时验证函数是否修改了某个输入变量，可以添加一个const in 修饰符来阻止函数对变量进行写操作。如果不这么做，那么在函数中写入一个in类型的变量，相当于对变量的局部拷贝进行的修改，因此只在函数自身范围内产生作用。</p>
+<h1 id="计算的不变性"><a class="markdownIt-Anchor" href="#计算的不变性"></a> 计算的不变性</h1>
+<p>GLSL无法保证在不同的着色器中，两个完全相同的计算式会得到完全一样的结果。这一情形与CPU端的应用程序进行计算时的问题相同，即不同的优化方式可能会导致结果非常细微的差异。这些细微的差异对于多通道的算法会产生问题，因为各个着色器阶段可能需要计算得到完全一致的结果。GLSL有两种方法来确保着色器之间的计算不变性，即invariant或者precise关键字。</p>
+<p>这两种方法都需要在图形设备上完成计算过程，来确保同一表达式的结果可以保证重复性（不变性）。但是，对于宿主计算机和图形硬件各自的计算，这两种方法都无法保留结果是完全一致的。着色器编译时的常量表达式是由编译器的宿主计算机计算的，因此无法保证宿主机计算的结果与图形硬件计算的结果完全相同。</p>
+<h2 id="invariant-限制符"><a class="markdownIt-Anchor" href="#invariant-限制符"></a> invariant 限制符</h2>
+<p>invariant 限制符可以设置任何着色器的输出变量。它可以确保如果两个着色器的输出变量使用了同样的表达式，并且表达式中的变量或者内置变量也是相同值，那么计算产生的结果也是相同的。可以将一个内置的输出变量声明为invariant，也可以声明一个用户自定义的变量为invariant。例如：</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">invariant</span> <span class="built_in">gl_Position</span>;</span><br><span class="line"><span class="keyword">invariant</span> <span class="keyword">centroid</span> <span class="keyword">out</span> <span class="type">vec3</span> Color;</span><br></pre></td></tr></table></figure>
+<p>在调试过程中，可能需要将着色器中所有可变量都设置为invariance。可以通过顶点着色器的预编译命令pragma来完成这项工作。</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma STDGL invariant(all)</span></span><br></pre></td></tr></table></figure>
+<p>全局都设置为invariance可以帮助我们解决调试问题；但是，这样对于着色器性能也会有所影响。而为了保证不变性，通常也会导致GLSL编译器所执行的一些优化工作被迫停止。</p>
+<h2 id="precise-限制符"><a class="markdownIt-Anchor" href="#precise-限制符"></a> precise 限制符</h2>
+<p>precise 限制符可以设置任何计算中的变量或者函数的返回值。。它的名字有点望文生义，它的用途并不是增加数据精度，而是增加计算的可复用性。我们通常在细分着色器中用它来避免造成几何体形状的裂缝。</p>
+<p>总体来说，如果必须保证某个表达式产生的结果是一致的，即使表达式中的数据发生了变化（但是在数学上并不影响结果）也是如此，那么此时我们应该使用precise而非invariant。</p>
+<h1 id="着色器的预处理器"><a class="markdownIt-Anchor" href="#着色器的预处理器"></a> 着色器的预处理器</h1>
+<p>编译一个GLSL着色器的第一步是解析预处理器。这一点与C语言类似，并且GLSL同样提供了一系列命令来有条件地生成编译代码块，或者定义数值。不过，与C语言的预处理器不同的是，GLSL中没有文件包含的命令（#include）。</p>
+<h2 id="预处理器命令"><a class="markdownIt-Anchor" href="#预处理器命令"></a> 预处理器命令</h2>
+<table>
+<thead>
+<tr>
+<th>预处理器命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#define<br />#undef</td>
+<td>控制常量与宏的定义，与C语言的预处理器命令类似</td>
+</tr>
+<tr>
+<td>#if<br />#ifdef<br />#ifndef<br />#else<br />#elif<br />#endif</td>
+<td>代码的条件编译，与c语言的预处理器命令和defined操作符均类似。<br />条件表达式中只可以使用整数表达式或者#include定义的值</td>
+</tr>
+<tr>
+<td>#error text</td>
+<td>强制编译器将text文字内容（直到第一个换行符为止）插入到着色器的信息日志当中</td>
+</tr>
+<tr>
+<td>#pragma options</td>
+<td>控制编译器的特定选项</td>
+</tr>
+<tr>
+<td>#extension options</td>
+<td>设置编译器支持特定GLSL拓展功能</td>
+</tr>
+<tr>
+<td>#version number</td>
+<td>设置当前使用的GLSL版本名称</td>
+</tr>
+<tr>
+<td>#line options</td>
+<td>设置诊断行号</td>
+</tr>
+</tbody>
+</table>
+<h2 id="宏定义"><a class="markdownIt-Anchor" href="#宏定义"></a> 宏定义</h2>
+<p>GLSL预处理器可以采取与C语言预处理器类似的宏定义方式，不过它不支持字符串替换以及预编译连接符。宏可以定义为单一的值。</p>
+<h2 id="编译控制"><a class="markdownIt-Anchor" href="#编译控制"></a> 编译控制</h2>
+<p>#pragma 命令可以向</p>
 
     </div>
 
@@ -556,14 +861,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">28k</span>
+    <span title="站点总字数">15k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">25 分钟</span>
+    <span title="站点阅读时长">55 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
