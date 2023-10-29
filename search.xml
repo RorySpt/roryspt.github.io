@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>Some lessons about UMG Treeview</title>
+      <link href="/2023/10/29/learn-ue/umg-treeview/"/>
+      <url>/2023/10/29/learn-ue/umg-treeview/</url>
+      
+        <content type="html"><![CDATA[<p>参考<a href="https://www.bilibili.com/read/cv18397136/?spm_id_from=333.999.0.0">UE4图文系列]8_1.树形图(Tree View)开篇 - 哔哩哔哩 (bilibili.com)</a></p><p>TreeView与 ListView 类似，但可以显示元素的分层树。树的基本项源标识根项，每个根项可以有 n 个关联的子项。嵌套没有硬性限制子项可以有子项，依此类推</p><p>若要使小部件可用作 TreeView 中的条目，它必须继承自 <a href="https://docs.unrealengine.com/5.3/en-US/API/Runtime/UMG/Blueprint/IUserObjectListEntry">IUserObjectListEntry</a> 接口。</p><p>组成：</p><ul><li>TreeView：视图，必须指定Entry类型</li><li>TreeViewEntry：必须继承自 <a href="https://docs.unrealengine.com/5.3/en-US/API/Runtime/UMG/Blueprint/IUserObjectListEntry">IUserObjectListEntry</a> 接口</li><li>TreeViewItem：条目数据类，传入TreeView::AddItem方法</li></ul><h1 id="treeview"><a class="markdownIt-Anchor" href="#treeview"></a> TreeView</h1><p>指定TreeViewEntry的Class</p><p>绑定委托<code>OnGetItemChildren(UObject*,TArry&lt;UObject*&gt;&amp;)</code>，并返回传入Item对应ChildernItem</p><p>调用AddItem可以将一个Item添加至TreeView，同时触发<code>RequestRefresh()</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">UListView::AddItem</span><span class="params">(UObject* Item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">ListItems.<span class="built_in">Add</span>(Item);</span><br><span class="line"><span class="type">const</span> TArray&lt;UObject*&gt; Added = &#123; Item &#125;;</span><br><span class="line"><span class="type">const</span> TArray&lt;UObject*&gt; Removed;</span><br><span class="line"><span class="built_in">OnItemsChanged</span>(Added, Removed);</span><br><span class="line"><span class="built_in">RequestRefresh</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>RequestRefresh的执行逻辑：</p><p>当触发<code>RequestRefresh()</code>的时候会依次遍历出所有需要显示的Item，包括通过委托<code>OnGetItemChildren(UObject*,TArry&lt;UObject*&gt;&amp;)</code>获取的子项。值得注意的是它会先调用<code>OnGetItemChildren</code>然后才判断是否需要显示子项（是否展开），不需要显示的结果将被丢弃。然后确保要显示的Item都有对应的Entry，如果没有则创建，并使用<code>IUserObjectListEntry::OnListItemObjectSet(UObject* ListItemObject)</code>将Item传给Entry进行初始化。最后按顺序罗列需要渲染的Entry。</p></blockquote><p>如果移除一个根Item（即通过AddItem添加的），调用Remove即可，他会移除TreeView中对应的Item并触发<code>RequestRefresh()</code>。</p><p>如果要移除一个Item子项，需要找到对应Item并从它的父项中移除，使<code>OnGetItemChildren</code>获取不到该Item，然后调用<code>RequestRefresh()</code>刷新需要渲染的Entry列表。</p><h1 id="treeviewentry"><a class="markdownIt-Anchor" href="#treeviewentry"></a> TreeViewEntry</h1><p>为控件（UserWidget），继承接口<a href="https://docs.unrealengine.com/5.3/en-US/API/Runtime/UMG/Blueprint/IUserObjectListEntry">IUserObjectListEntry</a>，并实现<code>IUserObjectListEntry::OnListItemObjectSet(UObject* ListItemObject)</code>，通过传入的Item进行初始化</p><h1 id="treeviewitem"><a class="markdownIt-Anchor" href="#treeviewitem"></a> TreeViewItem</h1><p>一般存放初始化TreeViewEntry所需要的数据和子Item，一般继承自UObject，在蓝图中可以使用<code>ConstructObjectFromClass</code>节点创建</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> UE </category>
+          
+          <category> UMG </category>
+          
+          <category> TreeView </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> UE </tag>
+            
+            <tag> UMG </tag>
+            
+            <tag> TreeView </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>socket example</title>
       <link href="/2023/10/22/learn-socket/example/"/>
       <url>/2023/10/22/learn-socket/example/</url>
@@ -47,42 +80,9 @@
       
         <tags>
             
-            <tag> Learn </tag>
-            
             <tag> MySql </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Light and Shadow</title>
-      <link href="/2023/09/25/learn-opengl/shader/light-and-shadow/"/>
-      <url>/2023/09/25/learn-opengl/shader/light-and-shadow/</url>
-      
-        <content type="html"><![CDATA[<h1 id="光照"><a class="markdownIt-Anchor" href="#光照"></a> 光照</h1><p>OpenGL 着色器程序几乎允许在场景实现光源的无限可能性。</p><h1 id="经典光照模型"><a class="markdownIt-Anchor" href="#经典光照模型"></a> 经典光照模型</h1><p>经典光照模型通过单独计算光源成分得到综合光照效果，然后添加到材质表面特定点。这些成分包括环境光，漫反射和镜面光。</p><p>环境光是不来自任何特定的方向的光。在整个场景中经典光照模型把它当成一个常量，组成一个合适的第一近似值来缩放场景中的光照成分。计算这个光照并不涉及任何关于光源方向或者眼睛观察场景的方向。它也可以当成积累每个光源的基础贡献值或者当成预先计算的单一全局效果。</p><p>漫反射光是散射在各个方向上均匀的表面特定的光源。漫反射光通过光照照亮才能看到表面，即使这个表面没有直接将光源反射到你的眼睛。它跟眼睛方向没有关系，但是跟光源方向有关系。当表面直接面向光源时，那么看起来会亮一点，仅仅因外在这个方向上比在倾斜方向上可以收集更多的光。漫反射光依赖于表面法线方向和光源方向来计算，但没有包含视线方向。它同样依赖于表面的颜色。</p><p>镜面光是由表面直接反射的高亮光。这个高亮就像镜子一样，跟表面材质多少有关。一个高度抛光的金属球能反射一个非常尖锐明亮的镜面高光，而一个磨砂的表面可以反射更大、更暗的镜面亮光，以及一个布球则一点都没有反射。这个特定角度效果的强度简称为光泽度（shininess）。计算镜面高光需要知道表面方向的近似度，也就是在光源和眼睛方向之间的直接反射大小，因此他需要知道表面法线、光源的方向和眼睛的方向。镜面高光可能结合或者不结合表面颜色。作为第一个近似值，它在不涉及任何表面颜色时会显得更真实。不管怎么说基础的颜色都会存在漫反射选项，给予它正确的色彩。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Learn </category>
-          
-          <category> Learn OpenGL </category>
-          
-          <category> Shading </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
-            
-            <tag> Shading </tag>
             
         </tags>
       
@@ -111,9 +111,42 @@
       
         <tags>
             
+            <tag> Learn </tag>
+            
             <tag> OpenGL </tag>
             
+            <tag> Shading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Light and Shadow</title>
+      <link href="/2023/09/25/learn-opengl/shader/light-and-shadow/"/>
+      <url>/2023/09/25/learn-opengl/shader/light-and-shadow/</url>
+      
+        <content type="html"><![CDATA[<h1 id="光照"><a class="markdownIt-Anchor" href="#光照"></a> 光照</h1><p>OpenGL 着色器程序几乎允许在场景实现光源的无限可能性。</p><h1 id="经典光照模型"><a class="markdownIt-Anchor" href="#经典光照模型"></a> 经典光照模型</h1><p>经典光照模型通过单独计算光源成分得到综合光照效果，然后添加到材质表面特定点。这些成分包括环境光，漫反射和镜面光。</p><p>环境光是不来自任何特定的方向的光。在整个场景中经典光照模型把它当成一个常量，组成一个合适的第一近似值来缩放场景中的光照成分。计算这个光照并不涉及任何关于光源方向或者眼睛观察场景的方向。它也可以当成积累每个光源的基础贡献值或者当成预先计算的单一全局效果。</p><p>漫反射光是散射在各个方向上均匀的表面特定的光源。漫反射光通过光照照亮才能看到表面，即使这个表面没有直接将光源反射到你的眼睛。它跟眼睛方向没有关系，但是跟光源方向有关系。当表面直接面向光源时，那么看起来会亮一点，仅仅因外在这个方向上比在倾斜方向上可以收集更多的光。漫反射光依赖于表面法线方向和光源方向来计算，但没有包含视线方向。它同样依赖于表面的颜色。</p><p>镜面光是由表面直接反射的高亮光。这个高亮就像镜子一样，跟表面材质多少有关。一个高度抛光的金属球能反射一个非常尖锐明亮的镜面高光，而一个磨砂的表面可以反射更大、更暗的镜面亮光，以及一个布球则一点都没有反射。这个特定角度效果的强度简称为光泽度（shininess）。计算镜面高光需要知道表面方向的近似度，也就是在光源和眼睛方向之间的直接反射大小，因此他需要知道表面法线、光源的方向和眼睛的方向。镜面高光可能结合或者不结合表面颜色。作为第一个近似值，它在不涉及任何表面颜色时会显得更真实。不管怎么说基础的颜色都会存在漫反射选项，给予它正确的色彩。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Learn </category>
+          
+          <category> Learn OpenGL </category>
+          
+          <category> Shading </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
             <tag> Shading </tag>
             
@@ -216,9 +249,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
             <tag> Shading </tag>
             
@@ -402,9 +435,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -431,9 +464,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
@@ -514,9 +547,9 @@
       
         <tags>
             
-            <tag> OpenGL </tag>
-            
             <tag> Learn </tag>
+            
+            <tag> OpenGL </tag>
             
         </tags>
       
